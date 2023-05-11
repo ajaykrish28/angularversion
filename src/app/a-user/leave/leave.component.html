@@ -1,0 +1,39 @@
+
+<div class="home_content">
+  <div class="text">Leave</div>
+  <div class="room-detail">
+
+      <div class="top1 new-room">
+          <h1>Holiday Deatils</h1>
+          <p> you can see the your menu details</p>
+          <i class="fa fa-user fa-3x" aria-hidden="true"></i><br>
+
+        <a routerLink="/holiday"><button type="submit" id="detail_btn">My room</button></a>
+        <router-outlet></router-outlet>
+      </div>
+      <div class="top1 your-room">
+          <h1>Leave deatils</h1>
+          <p>  you can see the your mess Timming</p>
+          <i class="fa fa-search fa-3x" aria-hidden="true"></i><br>
+          <!-- <button type="submit" id="detail_btn">Check</button> -->
+          <a routerLink="/leave-Check"><button type="submit" id="detail_btn">Check</button></a>
+          <router-outlet></router-outlet>
+
+      </div>
+  </div>
+  <div class="form">
+      <div class="left">
+          <h1>Query Box</h1>
+          <p>You can Mention your Query in here.</p>
+          <img src="../../../assets/post.jpg" alt="" width="300px" height="300px">
+      </div>
+      <div class="room-quries">
+          <input type="text" placeholder="Room Number"><br>
+          <input type="text" placeholder="Name"><br>
+          <input type="text" placeholder="Phone Number"><br>
+          <input type="text" placeholder="subject"><br>
+          <input type="textarea" placeholder="Problem"><br>
+          <button id="submitbtn" type="submit">submi</button>
+      </div>
+  </div>
+</div>

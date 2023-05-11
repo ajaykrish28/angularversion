@@ -1,0 +1,152 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "studentlogin": [
+    {
+      "namevalue": "arunkumar",
+      "emailvalue": "arun123@gmail.com",
+      "mobilevalue": 9597374373,
+      "passwordvalue": "12345Aa@!",
+      "confirmpasswordvalue": "12345Aa@!",
+      "id": 1
+    }
+  ],
+  "profile": [
+    {
+      "Name": "Arunkumar",
+      "email": "ajayarun348@gmail.com",
+      "phone": "9597374373",
+      "register": "1915003",
+      "feesStatus": "paid",
+      "roomno": "1",
+      "id": 1
+    },
+    {
+      "Name": "mani",
+      "email": "mani@gmail.com",
+      "phone": "959765486",
+      "register": "1915368",
+      "feesStatus": "unpaid",
+      "roomno": "002",
+      "id": 2
+    }
+  ],
+  "admin": [
+    {
+      "emailid": "ajayarun348@gmail.com",
+      "password": "12345Aa@!"
+    }
+  ],
+  "Studentdata": [
+    {
+      "name": "Arunkumar",
+      "mobile": "9090986544",
+      "age": "21",
+      "Fathername": "saravanan",
+      "mothername": "anitha",
+      "Email": "ajayarun348@gmail.com",
+      "permentaddress": "3/153,abc street,Namakkal",
+      "collegename": "KSR College of Engineer",
+      "Adharnumber": "12345667788",
+      "roomnumber": "1",
+      "id": 1
+    },
+    {
+      "name": "Hari",
+      "mobile": "9874568745",
+      "age": "22",
+      "Fathername": "Anbu",
+      "mothername": "selvi",
+      "Email": "hari@gmail.com",
+      "permentaddress": "123,east street ,salem",
+      "collegename": "KSR College of Engineering",
+      "Adharnumber": "6864597546",
+      "roomnumber": "2",
+      "id": 2
+    },
+    {
+      "name": "Ganesh",
+      "mobile": "9865474569",
+      "age": "22",
+      "Fathername": "selvam",
+      "mothername": "vasanthi",
+      "Email": "Ganesh@gmail.com",
+      "permentaddress": "145,West street,namakkal",
+      "collegename": "KSR College of Engineering",
+      "Adharnumber": "656869457",
+      "roomnumber": "3",
+      "id": 3
+    },
+    {
+      "name": null,
+      "mobile": null,
+      "age": null,
+      "Fathername": null,
+      "mothername": null,
+      "Email": null,
+      "permentaddress": null,
+      "collegename": null,
+      "Adharnumber": null,
+      "roomnumber": null,
+      "id": 4
+    }
+  ],
+  "AddRoomData": [
+    {
+      "RoomNo": "05",
+      "id": 1
+    },
+    {
+      "RoomNo": "09",
+      "id": 2
+    },
+    {
+      "RoomNo": "04",
+      "id": 3
+    },
+    {
+      "RoomNo": "08",
+      "id": 4
+    },
+    {
+      "RoomNo": "10",
+      "id": 5
+    },
+    {
+      "RoomNo": "11",
+      "id": 6
+    }
+  ],
+  "RoomData": [
+    {
+      "RoomNo": "01",
+      "RoomStatus": "filled",
+      "id": 1
+    },
+    {
+      "RoomNo": "02",
+      "RoomStatus": "filled",
+      "id": 2
+    },
+    {
+      "RoomNo": "12",
+      "RoomStatus": "filled",
+      "id": 3
+    }
+  ],
+  "attendanceData": [
+    {
+      "Name": "arun",
+      "phone": "25645456",
+      "status": "present",
+      "roomno": "1",
+      "id": 1
+    }
+  ],
+  "MessData": []
+}
