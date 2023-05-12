@@ -50,4 +50,14 @@ roomInfo(room:any){
   return this.http.post("http://localhost:3000/MessData",messdata);
 
  }
+
+
+// user
+getstudent_Attenance(){
+  return this.http.get("http://localhost:3000/user_attendance");
+ }
+ exchangeinfo(exc:any){
+  return this.http.post("  http://localhost:3000/room_exchange",exc);
+
+}
 }

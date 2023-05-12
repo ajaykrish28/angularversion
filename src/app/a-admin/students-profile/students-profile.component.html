@@ -1,118 +1,126 @@
-
 <app-SideBar></app-SideBar>
 <div class="home_content">
   <div class="text">Students Profile</div>
-   <div class="manageDetails">
-      <div class="viewDetails">
-       <h1>view Profiles</h1>
-       <i class='bx bx-user bx-md'></i>
-       <p>Here you can see the Student Profile Details </p>
+  <div class="manageDetails">
+    <div class="viewDetails">
+      <h1>view Profiles</h1>
+      <i class="bx bx-user bx-md"></i>
+      <p>Here you can see the Student Profile Details</p>
 
-       <button id="viewbtn" (click)="show_view()">view </button>
+      <button id="viewbtn" (click)="show_view()">view</button>
+    </div>
+    <div class="updates">
+      <h1>updates</h1>
 
-      </div>
-      <div class="updates">
-          <h1>updates</h1>
+      <i class="bx bx-cloud-upload bx-md"></i>
+      <p>Here you can see the update</p>
 
-          <i class='bx bx-cloud-upload bx-md' ></i>
-          <p>Here you can see the update </p>
-
-          <button id="update_btn"  (click)="show_update()">updates </button>
-      </div>
-   </div>
-   <div class="Table_Info">
+      <button id="update_btn" (click)="show_update()">updates</button>
+    </div>
+  </div>
+  <div class="Table_Info">
     <div class="table_view">
-
-
-
       <table id="table_view">
         <tr>
+          <th>Name</th>
+          <th>Phone number</th>
 
-         <th>Name</th>
-         <th>Phone number</th>
+          <th>Age</th>
 
-         <th>Age</th>
-
-         <th> Father name</th>
-         <th> Mother name</th>
-         <th>Email id</th>
-         <th>Address</th>
-         <th>College Name</th>
-         <th>Aadhar Number</th>
-         <th>Room Number</th>
-
+          <th>Father name</th>
+          <th>Mother name</th>
+          <th>Email id</th>
+          <th>Address</th>
+          <th>College Name</th>
+          <th>Aadhar Number</th>
+          <th>Room Number</th>
         </tr>
         <!-- data 1 -->
         <tr *ngFor="let eachData of userdata">
-         <td >{{eachData.name}} </td>
-         <td>{{eachData.mobile}}</td>
-         <td>{{eachData.age}}</td>
-         <td>{{eachData.Fathername}}</td>
-         <td>{{eachData.mothername}}</td>
-         <td>{{eachData.Email}}</td>
-         <td>{{eachData.permentaddress}}</td>
-         <td>{{eachData.collegename}}</td>
-         <td>{{eachData.Adharnumber}}</td>
-         <td>{{eachData.roomnumber}}</td>
-         <!-- <td>Saravanan M</td>
-         <td>9994955236</td>
-         <td>3/513,east street, namakkal</td> -->
+          <td>{{ eachData.name }}</td>
+          <td>{{ eachData.mobile }}</td>
+          <td>{{ eachData.age }}</td>
+          <td>{{ eachData.Fathername }}</td>
+          <td>{{ eachData.mothername }}</td>
+          <td>{{ eachData.Email }}</td>
+          <td>{{ eachData.permentaddress }}</td>
+          <td>{{ eachData.collegename }}</td>
+          <td>{{ eachData.Adharnumber }}</td>
+          <td>{{ eachData.roomnumber }}</td>
         </tr>
+      </table>
+    </div>
 
-       </table> </div>
+    <div class="table_updates">
+      <div class="update_container_head">Profile updation</div>
 
+      <form action="" [formGroup]="newstudent" (ngSubmit)="addstudentinfo()">
+        <div class="table_1">
+          <label for="">Name</label><br />
+          <input type="text" placeholder="name" formControlName="name" /> <br />
+          <label for="">Mobile</label> <br />
+          <input type="text" placeholder="mobile" formControlName="mobile" />
+          <br />
 
+          <label for="">Age</label><br />
+          <input type="text" placeholder="age" formControlName="age" /> <br />
+          <label for="">Father Name</label><br />
+          <input
+            type="text"
+            placeholder="Father name"
+            formControlName="Fathername"
+          />
+          <br />
+          <label for="">Mother Name</label><br />
+          <input
+            type="text"
+            placeholder="mother name"
+            formControlName="mothername"
+          />
+        </div>
+        <div class="table_2">
+          <label for="">Email Id</label><br />
+          <input type="text" placeholder="Email" formControlName="Email" />
+          <br />
+          <label for="">Address</label><br />
+          <input
+            type="text"
+            placeholder="perment address"
+            formControlName="permentaddress"
+          />
+          <br />
 
+          <label for="">College Name</label><br />
+          <input
+            type="text"
+            placeholder="college name"
+            formControlName="collegename"
+          /><br />
+          <label for="">Adhar Number</label><br />
+          <input
+            type="text"
+            placeholder="Adhar number "
+            formControlName="Adharnumber"
+          /><br />
+          <label for="">Room Number</label><br />
+          <select name="" type="text" id="" formControlName="feesStatus">
+            <option value="" disabled selected>status</option>
 
+            <option value="unpaid" *ngFor="let roomupdate of room">
+              {{ roomupdate.RoomNo }}
+            </option></select
+          ><br />
+        </div>
 
+        <div class="profilebtn">
+          <button>update</button> <br />
+          <button>delete</button><br />
 
-  <div class="table_updates">
-    <div class="update_container_head"> Profile updation</div>
-
-
-
-    <form action="" [formGroup]="newstudent" (ngSubmit)="addstudentinfo()">
-
-      <div class="table_1">
-        <label for="">Name</label><br>
-    <input type="text" placeholder="name" formControlName="name"> <br>
-    <label for="">Mobile</label> <br>
-    <input type="text" placeholder="mobile"  formControlName="mobile"> <br>
-
-    <label for="">Age</label><br>
-    <input type="text" placeholder="age" formControlName="age"> <br>
-    <label for="">Father Name</label><br>
-    <input type="text" placeholder="Father name"  formControlName="Fathername"> <br>
-    <label for="">Mother Name</label><br>
-    <input type="text" placeholder="mother name" formControlName="mothername"> </div>
-    <div class="table_2">
-    <label for="">Email Id</label><br>
-    <input type="text" placeholder="Email"  formControlName="Email"> <br>
-    <label for="">Address</label><br>
-    <input type="text" placeholder="perment address"  formControlName="permentaddress"> <br>
-
-<label for="">College Name</label><br>
-    <input type="text" placeholder="college name"  formControlName="collegename"><br>
-    <label for="">Adhar Number</label><br>
-    <input type="text" placeholder="Adhar number " formControlName="Adharnumber"><br>
-    <label for="">Room Number</label><br>
-    <select name="" type="text" id="" formControlName="feesStatus">
-      <option value=""disabled selected>status</option>
-
-      <option value="unpaid"*ngFor="let roomupdate of room">{{roomupdate.RoomNo}}</option></select><br></div>
-
-    <div class="profilebtn">
-    <button>update</button> <br>
-    <button>delete</button><br>
-
-   <button>submit</button> </div>
-   <br><br>
-  </form>
- <br><br>
- </div>
-
-
-
-
-
+          <button>submit</button>
+        </div>
+        <br /><br />
+      </form>
+      <br /><br />
+    </div>
+  </div>
 </div>

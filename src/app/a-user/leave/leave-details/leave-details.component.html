@@ -1,35 +1,21 @@
+<div class="home_content">
+  <div class="text">Students Profile</div>
+  <table id="table_view">
+    <tr>
+      <th>name</th>
+      <th>phone</th>
+      <th>Room no</th>
+      <th>Date</th>
+      <th>status</th>
+    </tr>
+    <!-- data 1 -->
+    <tr *ngFor="let eachData of attenance">
+      <td>{{ eachData.Name }}</td>
+      <td>{{ eachData.phone }}</td>
+      <td>{{ eachData.roomno }}</td>
+      <td>{{ eachData.date }}</td>
 
-<table>
-  <tr>
-    <th> name</th>
-    <th>phone</th>
-    <th>Room no</th>
-    <th>status</th>
-    <th>Date</th>
-
-  </tr>
-  <tr>
-    <td>arunkumar s</td>
-    <td>9090909</td>
-    <td>001</td>
-    <td>absent</td>
-    <td>20-01-2023</td>
-
-  </tr>
-  <tr>
-    <td>arunkumar s</td>
-    <td>9090909</td>
-    <td>001</td>
-    <td>absent</td>
-    <td>22-01-2023</td>
-
-  </tr>
-  <tr>
-    <td>arunkumar s</td>
-    <td>9090909</td>
-    <td>001</td>
-    <td>absent</td>
-    <td>25-01-2023</td>
-
-  </tr>
-</table>
+      <td>{{ eachData.status }}</td>
+    </tr>
+  </table>
+</div>

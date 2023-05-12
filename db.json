@@ -94,6 +94,14 @@
       "Adharnumber": null,
       "roomnumber": null,
       "id": 4
+    },
+    {
+      "namevalue": "aaaaaaaa",
+      "emailvalue": "ajay345@gmail.com",
+      "mobilevalue": 9632587410,
+      "feesStatus": "Exchange",
+      "Reason": "jcjdjd",
+      "id": 5
     }
   ],
   "AddRoomData": [
@@ -149,8 +157,84 @@
       "phone": "25645456",
       "status": "present",
       "roomno": "1",
+      "date": "22-01-2023",
       "id": 1
     }
   ],
-  "MessData": []
+  "MessData": [],
+  "room_exchange": [],
+  "user_attendance": [
+    {
+      "Name": "arun",
+      "phone": "925645456",
+      "status": "present",
+      "roomno": "1",
+      "date": "23-01-2023",
+      "id": 1
+    },
+    {
+      "Name": "arun",
+      "phone": "925645456",
+      "status": "present",
+      "roomno": "1",
+      "date": "24-01-2023",
+      "id": 2
+    },
+    {
+      "Name": "arun",
+      "phone": "925645456",
+      "status": "present",
+      "roomno": "1",
+      "date": "25-01-2023",
+      "id": 3
+    },
+    {
+      "Name": "arun",
+      "phone": "925645456",
+      "status": "present",
+      "roomno": "1",
+      "date": "26-01-2023",
+      "id": 4
+    },
+    {
+      "Name": "arun",
+      "phone": "925645456",
+      "status": "present",
+      "roomno": "1",
+      "date": "27-01-2023",
+      "id": 5
+    },
+    {
+      "Name": "arun",
+      "phone": "925645456",
+      "status": "present",
+      "date": "28-01-2023",
+      "roomno": "1",
+      "id": 6
+    },
+    {
+      "Name": "arun",
+      "phone": "925645456",
+      "status": "present",
+      "date": "29-01-2023",
+      "roomno": "1",
+      "id": 7
+    },
+    {
+      "Name": "arun",
+      "phone": "25645456",
+      "status": "present",
+      "date": "30-01-2023",
+      "roomno": "1",
+      "id": 8
+    },
+    {
+      "Name": "arun",
+      "phone": "925645456",
+      "status": "present",
+      "roomno": "1",
+      "date": "31-01-2023",
+      "id": 9
+    }
+  ]
 }
