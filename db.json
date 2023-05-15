@@ -14,6 +14,14 @@
       "passwordvalue": "12345Aa@!",
       "confirmpasswordvalue": "12345Aa@!",
       "id": 1
+    },
+    {
+      "namevalue": "yogesh",
+      "emailvalue": "yogesh12@gmail.com",
+      "mobilevalue": 9898989898,
+      "passwordvalue": "Yogesh12@gmail.com",
+      "confirmpasswordvalue": "Yogesh12@gmail.com",
+      "id": 2
     }
   ],
   "profile": [
@@ -34,6 +42,33 @@
       "feesStatus": "unpaid",
       "roomno": "002",
       "id": 2
+    },
+    {
+      "Name": null,
+      "email": null,
+      "phone": null,
+      "register": null,
+      "feesStatus": null,
+      "roomno": null,
+      "id": 3
+    },
+    {
+      "Name": "",
+      "email": "",
+      "phone": null,
+      "register": null,
+      "feesStatus": null,
+      "roomno": null,
+      "id": 4
+    },
+    {
+      "Name": null,
+      "email": null,
+      "phone": null,
+      "register": null,
+      "feesStatus": null,
+      "roomno": null,
+      "id": 5
     }
   ],
   "admin": [
@@ -45,41 +80,16 @@
   "Studentdata": [
     {
       "name": "Arunkumar",
-      "mobile": "9090986544",
+      "mobile": "9597374379",
       "age": "21",
-      "Fathername": "saravanan",
-      "mothername": "anitha",
+      "Fathername": "Saravanan",
+      "mothername": "Anitha",
       "Email": "ajayarun348@gmail.com",
-      "permentaddress": "3/153,abc street,Namakkal",
-      "collegename": "KSR College of Engineer",
-      "Adharnumber": "12345667788",
-      "roomnumber": "1",
-      "id": 1
-    },
-    {
-      "name": "Hari",
-      "mobile": "9874568745",
-      "age": "22",
-      "Fathername": "Anbu",
-      "mothername": "selvi",
-      "Email": "hari@gmail.com",
-      "permentaddress": "123,east street ,salem",
-      "collegename": "KSR College of Engineering",
-      "Adharnumber": "6864597546",
-      "roomnumber": "2",
-      "id": 2
-    },
-    {
-      "name": "Ganesh",
-      "mobile": "9865474569",
-      "age": "22",
-      "Fathername": "selvam",
-      "mothername": "vasanthi",
-      "Email": "Ganesh@gmail.com",
-      "permentaddress": "145,West street,namakkal",
-      "collegename": "KSR College of Engineering",
-      "Adharnumber": "656869457",
-      "roomnumber": "3",
+      "permentaddress": "trichy",
+      "collegename": "ksr",
+      "Adharnumber": "422123233",
+      "roomnumber": null,
+      "regNo": "1915003",
       "id": 3
     },
     {
@@ -93,15 +103,64 @@
       "collegename": null,
       "Adharnumber": null,
       "roomnumber": null,
-      "id": 4
+      "regNo": "1915012",
+      "id": 5
     },
     {
-      "namevalue": "aaaaaaaa",
-      "emailvalue": "ajay345@gmail.com",
-      "mobilevalue": 9632587410,
-      "feesStatus": "Exchange",
-      "Reason": "jcjdjd",
-      "id": 5
+      "name": null,
+      "mobile": null,
+      "age": null,
+      "Fathername": null,
+      "mothername": null,
+      "Email": null,
+      "permentaddress": null,
+      "collegename": null,
+      "Adharnumber": null,
+      "roomnumber": null,
+      "regNo": null,
+      "id": 7
+    },
+    {
+      "name": null,
+      "mobile": null,
+      "age": null,
+      "Fathername": null,
+      "mothername": null,
+      "Email": null,
+      "permentaddress": null,
+      "collegename": null,
+      "Adharnumber": null,
+      "roomnumber": null,
+      "regNo": null,
+      "id": 9
+    },
+    {
+      "name": null,
+      "mobile": null,
+      "age": null,
+      "Fathername": null,
+      "mothername": null,
+      "Email": null,
+      "permentaddress": null,
+      "collegename": null,
+      "Adharnumber": null,
+      "roomnumber": null,
+      "regNo": null,
+      "id": 10
+    },
+    {
+      "name": "Yogesh",
+      "mobile": null,
+      "age": null,
+      "Fathername": null,
+      "mothername": null,
+      "Email": null,
+      "permentaddress": null,
+      "collegename": null,
+      "Adharnumber": null,
+      "roomnumber": null,
+      "regNo": "1915012",
+      "id": 11
     }
   ],
   "AddRoomData": [
@@ -159,6 +218,20 @@
       "roomno": "1",
       "date": "22-01-2023",
       "id": 1
+    },
+    {
+      "Name": null,
+      "phone": null,
+      "status": null,
+      "roomno": null,
+      "id": 2
+    },
+    {
+      "Name": "hjjj",
+      "phone": null,
+      "status": null,
+      "roomno": null,
+      "id": 3
     }
   ],
   "MessData": [],

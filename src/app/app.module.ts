@@ -38,6 +38,7 @@ import { MessMenuComponent } from './a-user/mess/mess-menu/mess-menu.component';
 import { MessTimeComponent } from './a-user/mess/mess-time/mess-time.component';
 import { LeaveHolidayComponent } from './a-user/leave/leave-holiday/leave-holiday.component';
 import { LeaveDetailsComponent } from './a-user/leave/leave-details/leave-details.component';
+import { ProfileComponent } from './a-user/profile/profile.component';
 
 
 
@@ -75,7 +76,8 @@ import { LeaveDetailsComponent } from './a-user/leave/leave-details/leave-detail
       MessMenuComponent,
       MessTimeComponent,
       LeaveHolidayComponent,
-      LeaveDetailsComponent
+      LeaveDetailsComponent,
+      ProfileComponent
 
 
    ],

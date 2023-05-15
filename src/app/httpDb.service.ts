@@ -26,6 +26,19 @@ studentProfile(){
   return this.http.get("http://localhost:3000/Studentdata");
 
  }
+ //delete student data
+ deleteStudent(id:any){
+  alert(id);
+  return this.http.delete(`http://localhost:3000/Studentdata/${id}`);
+
+ }
+ studentUpdate(body:any,id:any){
+  return this.http.put("http://localhost:3000/Studentdata"+"/"+id,body);
+
+ }
+
+
+
  addroom(room:any){
   return this.http.post("http://localhost:3000/AddRoomData",room);
  }

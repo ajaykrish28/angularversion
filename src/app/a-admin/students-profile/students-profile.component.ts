@@ -1,3 +1,4 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { HttpDbService } from 'src/app/httpDb.service';
@@ -10,16 +11,19 @@ import { HttpDbService } from 'src/app/httpDb.service';
 export class StudentsProfileComponent implements OnInit {
   userdata: any;
   room: any;
-
-  constructor( private service:HttpDbService,private fb:FormBuilder) {
+  students:any;
+  studentId:any;
+  constructor( private service:HttpDbService,private fb:FormBuilder,private http:HttpClient) {
     this.service.studentProfile().subscribe((data: any)=>{
       this.userdata=data;
     })
     this.service. getaddroom().subscribe((data: any)=>{
       this.room=data;
-    }
+    })
+this.http.get("http://localhost:3000/Studentdata").subscribe((data: any)=>{
+  this.students=data;
+})
 
-    )
   }
 
 
@@ -58,16 +62,39 @@ newstudent= this.fb.group({
   collegename:[,Validators.required],
   Adharnumber:[,Validators.required],
   roomnumber:[,Validators.required],
-
+  regNo:[,Validators.required],
 
 })
-addstudentinfo(){
-  return this.service.addstudent(this.newstudent.value).subscribe((data)=>
-  alert("sucessfully added")
-  )
+
+deleteData(){
+  this.students.forEach((element:any) => {
+if(element.regNo== this.newstudent.controls["regNo"].value){
+
+  this.studentId=element.id;
+}
+  });
+  return this.service.deleteStudent(this.studentId).subscribe((data)=>{
+    alert("sucessfully deleted");
+    window.location.reload();
+  })
+
+
+}
+
+updateStudentData(){
+  // return this.service. studentUpdate(this.newstudent.value).subscribe((data)=>
+  // alert("sucessfully update")
+  // )
+
 }
 
   ngOnInit() {
+  }
+  studentinfo(){
+    alert("sucessfully added");
+    return this.service.addstudent(this.newstudent.value).subscribe((data)=>
+    alert("sucessfully added")
+    )
   }
 
 }

@@ -16,9 +16,9 @@ export class RoomExchangeComponent implements OnInit {
 
   ExchangeForm= this.fb.group({
     namevalue:[,Validators.required],
-    emailvalue:[,Validators.required],
+  Status:[,Validators.required],
     mobilevalue:[,Validators.required],
-    feesStatus:[,Validators.required],
+    RoomNo:[,Validators.required],
     Reason:[,Validators.required],
 
 

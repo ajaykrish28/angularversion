@@ -63,20 +63,37 @@
      <form [formGroup]="feesgrp" (submit)="feesform()">
       <div class="rightForm">
     <label for="">Name</label> <br>
-    <input type="text" name="" id="" formControlName="Name"> <br>
+    <input type="text" name="" id="" formControlName="Name">
+    <div *ngIf="feesgrp.controls['Name'].dirty" class="alert" pattern="^[a-zA-Z]+$">
+      <p *ngIf="feesgrp.controls['Name'].errors?.['required']">User name should not be Empty</p>
+      <p *ngIf="feesgrp.controls['Name'].errors?.['pattern']">Enter proper User Name</p>
+    </div>
+    <br>
 
     <label for="">Email</label> <br>
     <input type="text" name="" id=""  formControlName="email"> <br>
 
     <label for="">Phone No</label> <br>
-    <input type="text" name="" id=""  formControlName="phone">  <br>
+    <input type="number" name="" id=""  formControlName="phone" pattern="^[6-9]\d{9}$" >
+    <div *ngIf="feesgrp.controls['phone'].dirty" class="alert">
+      <p *ngIf="feesgrp.controls['phone'].errors?.['required']">Mobile Number should not be Empty</p>
+      <p *ngIf="feesgrp.controls['phone'].errors?.['pattern']">Enter a valid Mobile Number</p>
+    </div><br>
   </div>
   <div class="lesftForm">
     <label for="">Register no</label> <br>
-    <input type="text" name="" id=""  formControlName="register"> <br>
+    <input type="number" name="" id=""  formControlName="register" pattern="^[0-9]\d{6}$" >
+    <div *ngIf="feesgrp.controls['register'].dirty" class="alert">
+      <p *ngIf="feesgrp.controls['register'].errors?.['required']">User name should not be Empty</p>
+      <p *ngIf="feesgrp.controls['register'].errors?.['pattern']">Enter proper User Name</p>
+    </div> <br>
 
     <label for="">Room no</label> <br>
-    <input type="text" name="" id=""  formControlName="roomno"> <br>
+    <input type="number" name="" id=""  formControlName="roomno" pattern="^[0-9]\d{2}$" >
+    <div *ngIf="feesgrp.controls['register'].dirty" class="alert">
+      <p *ngIf="feesgrp.controls['register'].errors?.['required']">User name should not be Empty</p>
+      <p *ngIf="feesgrp.controls['register'].errors?.['pattern']">Enter proper User Name</p>
+    </div> <br>
 
     <div class="Fees status" >
 

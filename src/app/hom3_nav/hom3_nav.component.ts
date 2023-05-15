@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-hom3_nav',
@@ -7,6 +8,7 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./hom3_nav.component.css']
 })
 export class Hom3_navComponent implements OnInit {
+usersuccess=false;
 
 
   contactModal(){
@@ -19,7 +21,14 @@ export class Hom3_navComponent implements OnInit {
     modal.close();
  }
 
- constructor(private fb:FormBuilder) { }
+ constructor(private fb:FormBuilder,public authService:AuthService) {
+  this.usersuccess=Boolean(sessionStorage.getItem("usersuccess"))||this.authService.userlogin
+  }
+  logout(){
+    this.authService.userlogin=false;
+    this.usersuccess=false;
+    sessionStorage.clear();
+  }
  LoginForm=this.fb.group({
    namevalue:[,Validators .required],
    emailvalue:[,Validators .required],
