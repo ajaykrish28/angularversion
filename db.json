@@ -11,8 +11,8 @@
       "namevalue": "arunkumar",
       "emailvalue": "arun123@gmail.com",
       "mobilevalue": 9597374373,
-      "passwordvalue": "12345Aa@!",
-      "confirmpasswordvalue": "12345Aa@!",
+      "passwordvalue": "12345Aa@$",
+      "confirmpasswordvalue": "12345Aa@$",
       "id": 1
     },
     {
@@ -22,6 +22,30 @@
       "passwordvalue": "Yogesh12@gmail.com",
       "confirmpasswordvalue": "Yogesh12@gmail.com",
       "id": 2
+    },
+    {
+      "namevalue": "subramani",
+      "emailvalue": "mani123@gmail.com",
+      "mobilevalue": 9876543210,
+      "passwordvalue": "Mani123@gmail.com",
+      "confirmpasswordvalue": "Mani123@gmail.com",
+      "id": 3
+    },
+    {
+      "namevalue": "Hari",
+      "emailvalue": "hari123@gmail.com",
+      "mobilevalue": 9876543210,
+      "passwordvalue": "Hari123@gmail.com",
+      "confirmpasswordvalue": "Hari123@gmail.com",
+      "id": 4
+    },
+    {
+      "namevalue": "Dinesh",
+      "emailvalue": "dinesh123@gmail.com",
+      "mobilevalue": 9876543210,
+      "passwordvalue": "Dinesh123@gmail.com",
+      "confirmpasswordvalue": "Dinesh123@gmail.com",
+      "id": 5
     }
   ],
   "profile": [
@@ -103,64 +127,50 @@
       "collegename": null,
       "Adharnumber": null,
       "roomnumber": null,
-      "regNo": "1915012",
+      "regNo": null,
+      "id": 4
+    },
+    {
+      "name": "Hari",
+      "mobile": "9876543210",
+      "age": "22",
+      "Fathername": "murugan",
+      "mothername": "selvi",
+      "Email": "hari123@gmail.com",
+      "permentaddress": "salem",
+      "collegename": "ksr",
+      "Adharnumber": "6788 6544 7890",
+      "roomnumber": null,
+      "regNo": "1915004",
       "id": 5
     },
     {
-      "name": null,
-      "mobile": null,
-      "age": null,
-      "Fathername": null,
-      "mothername": null,
-      "Email": null,
-      "permentaddress": null,
-      "collegename": null,
-      "Adharnumber": null,
+      "name": "dinesh",
+      "mobile": "9876543210",
+      "age": "21",
+      "Fathername": "diwakar",
+      "mothername": "sivani",
+      "Email": "dinesh123@gmail.com",
+      "permentaddress": "Namakkal",
+      "collegename": "ksr",
+      "Adharnumber": "9876 6543 6789",
       "roomnumber": null,
-      "regNo": null,
+      "regNo": "1915005",
+      "id": 6
+    },
+    {
+      "name": "Mani",
+      "mobile": "9876543210",
+      "age": "21",
+      "Fathername": "kavin",
+      "mothername": "kala",
+      "Email": "mani123@gmail.com",
+      "permentaddress": "salem",
+      "collegename": "ksr",
+      "Adharnumber": "7659 2356 6784",
+      "roomnumber": null,
+      "regNo": "1915006",
       "id": 7
-    },
-    {
-      "name": null,
-      "mobile": null,
-      "age": null,
-      "Fathername": null,
-      "mothername": null,
-      "Email": null,
-      "permentaddress": null,
-      "collegename": null,
-      "Adharnumber": null,
-      "roomnumber": null,
-      "regNo": null,
-      "id": 9
-    },
-    {
-      "name": null,
-      "mobile": null,
-      "age": null,
-      "Fathername": null,
-      "mothername": null,
-      "Email": null,
-      "permentaddress": null,
-      "collegename": null,
-      "Adharnumber": null,
-      "roomnumber": null,
-      "regNo": null,
-      "id": 10
-    },
-    {
-      "name": "Yogesh",
-      "mobile": null,
-      "age": null,
-      "Fathername": null,
-      "mothername": null,
-      "Email": null,
-      "permentaddress": null,
-      "collegename": null,
-      "Adharnumber": null,
-      "roomnumber": null,
-      "regNo": "1915012",
-      "id": 11
     }
   ],
   "AddRoomData": [

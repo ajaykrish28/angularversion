@@ -37,7 +37,7 @@
  .profile-user{
     margin-top: 3%;
     margin-left:15%;
-    height: 32%;
+    height: 38%;
     border: 1px solid blue;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -53,7 +53,7 @@
  .totalfees{
     margin-top: 3%;
     margin-left:15%;
-    height: 27%;
+    height: 30%;
     border: 1px solid blue;
     text-align: center;
     border-radius: 3px;
@@ -70,17 +70,10 @@
     border-radius: 3px;
     text-align: center;
  }
- .totalfees  button{
-    margin-right: 10%;
 
- }
- .pending   button{
-    margin-right: 10%;
-
- }
  button{
     background-color:blue ;
-    float: right;
+
     margin: 2%;
 
     color:white;
@@ -122,3 +115,13 @@
  .top-payment i{
   margin-left: 80%;
  }
+#serach{
+  padding: 15px;
+  margin-right: 250%;
+}
+#menu_show{
+  margin-left: 9%;
+  padding: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}

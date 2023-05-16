@@ -26,19 +26,6 @@ this.http.get("http://localhost:3000/Studentdata").subscribe((data: any)=>{
 
   }
 
-
-
-//   viewbtn.onclick = function () {
-//
-//  }
-
-
-
-
-//   update_btn.onclick = function () {
-//
-
-//  }
 show_view(){
     let viewbtn:any = document.querySelector("#viewbtn");
   let table_view:any= document.querySelector(".table_view");
@@ -78,13 +65,6 @@ if(element.regNo== this.newstudent.controls["regNo"].value){
     window.location.reload();
   })
 
-
-}
-
-updateStudentData(){
-  // return this.service. studentUpdate(this.newstudent.value).subscribe((data)=>
-  // alert("sucessfully update")
-  // )
 
 }
 

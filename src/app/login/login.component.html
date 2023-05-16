@@ -14,15 +14,15 @@
 
           <div class="login-form">
               <h1>Login</h1>
-              <form  [formGroup]="LoginForm"  (submit)="loginform()">
-                  <input type="text" placeholder="Email id"   id="username" formControlName="emailvalue" pattern= "^[0-9a-zA-Z]+[._]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$"><br>
+              <form  [formGroup]="LoginForm"  (submit)="loginform(email.value)">
+                  <input type="text" placeholder="Email id"   id="username"  formControlName="emailvalue" pattern= "^[0-9a-zA-Z]+[._]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$" #email/><br>
                   <div *ngIf="LoginForm.controls['emailvalue'].dirty" class="alert">
                     <p *ngIf="LoginForm.controls['emailvalue'].errors?.['required']">Email should not be Empty</p>
                     <p *ngIf="LoginForm.controls['emailvalue'].errors?.['pattern']">Enter a valid Email</p>
                   </div>
                   <br>
                  <br>
-                  <input type="password" placeholder="Password"  id="Password"  formControlName="passwordvalue" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+                  <input type="password" placeholder="Password"  id="Password"  formControlName="passwordvalue" #password pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
                   <div *ngIf="LoginForm.controls['passwordvalue'].dirty" class="alert">
                     <p *ngIf="LoginForm.controls['passwordvalue'].errors?.['required']" >Password should not be Empty</p>
                     <p *ngIf="LoginForm.controls['passwordvalue'].errors?.['pattern']" >Password Must Contain 1Caps(A)-Num(1)-Symbol(@)</p>
@@ -43,4 +43,4 @@
       </div>
 
   </div>
-</body> 
+</body>

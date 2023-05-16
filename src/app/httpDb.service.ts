@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable, Observer } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -73,4 +74,16 @@ getstudent_Attenance(){
   return this.http.post("  http://localhost:3000/room_exchange",exc);
 
 }
+getStudentPro():Observable<any>{
+  return this.http.get("http://localhost:3000/Studentdata");
+  }
+  updateData(id: number, updatedData: any){
+
+    return this.http.put("http://localhost:3000/Studentdata", updatedData);
+  }
+  getregno(){
+    return this.http.get("http://localhost:3000/studentlogin");
+  }
+
 }
+

@@ -28,3 +28,24 @@
 .home_content p {
   margin-bottom: 15px;
 }
+.container
+{
+  margin-left: 15%;
+}
+.container p
+{
+padding: 10px;
+}
+.container span
+{
+  font-size:larger;
+padding: 5px;
+
+
+}
+.container strong
+{
+  font-size:larger;
+
+}
+

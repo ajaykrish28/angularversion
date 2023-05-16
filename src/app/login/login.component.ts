@@ -24,7 +24,10 @@ export class LoginComponent implements OnInit {
   });
   error: boolean = false;
 
-  loginform() {
+  loginform(email:any) {
+    console.log(email);
+    
+    sessionStorage.setItem('emailDetails',email)
     this.user();
     this.admin();
     if (this.error) {
@@ -45,6 +48,7 @@ export class LoginComponent implements OnInit {
         alert('login sucessful');
         this.LoginForm.reset();
         this.route.navigate(['/Profile-user']);
+
       }
       this.error = false;
     });

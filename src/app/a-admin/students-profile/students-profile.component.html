@@ -20,7 +20,11 @@
   </div>
   <div class="Table_Info">
     <div class="table_view">
+      <div class="searchBtn"><h2 id="regHeading">register number:</h2><input id="searchBtn" placeholder="register number" type="text" ><button>search</button></div>
+
       <table id="table_view">
+
+
         <tr>
           <th>Name</th>
           <th>Register number</th>
@@ -161,12 +165,13 @@
             </option></select
           ><br />
         </div>
-        <button  (click)=" studentinfo()" >Save</button> <br />
+        <div class="butn_grid">
+        <button  id="Save" (click)=" studentinfo()" >Save</button>
 
 
-          <button  (click)=" updateStudentData()" >update</button> <br />
-          <button  (click)="deleteData()">delete</button><br/>
-
+          <button id="update" (click)="studentinfo()">update</button>
+          <button id="delete" (click)="deleteData()">delete</button>
+        </div>
 
 
         <br /><br />

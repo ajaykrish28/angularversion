@@ -7,7 +7,7 @@
   padding: 20px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.5s ease;
- 
+
 }
 
 
@@ -220,4 +220,43 @@ p
 }
 .update_container_head{
   background-color: blue;
+}
+#Save{
+  padding: 10px;
+  width: 150px;
+  margin: 10px;
+}
+#update{
+  padding: 10px;
+  width: 150px;
+  margin: 10px;
+
+}
+#delete{
+  padding: 10px;
+  width: 150px;
+  margin: 10px;
+
+}
+.butn_grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 50%;
+}
+.searchBtn
+{
+  display: grid;
+  grid-template-columns: 20% 10% 10%;
+  margin-bottom: 10px;
+
+}
+#searchBtn{
+  width: 100%;
+  border:2px solid blue;
+  margin-right:10px ;
+
+}
+#regHeading{
+  margin-left:100px ;
+  margin-top: 5px;
 }
