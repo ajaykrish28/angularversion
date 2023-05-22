@@ -81,7 +81,7 @@
 
 
           <button>submit</button>
-          <button>update</button>
+          <button >delete</button>
         </form>
       </div>
 
@@ -100,14 +100,16 @@
       </table>
       <div class="UpdateRoom">
 
-        <form action="" [formGroup]="removeroom" (ngSubmit)="roominfo()">
+        <form action="" [formGroup]="removeroom" >
+          <!-- (ngSubmit)="roominfo()" -->
         <h2></h2>
 
           <label for="">Room Number :</label>&nbsp;
-          <input type="text" formControlName="RoomNo" name="" id="" /> &nbsp; &nbsp;  <label for="">status :</label>&nbsp;
+          <input type="text" formControlName="RoomNo" name="" id="" />   <label for="">status :</label>&nbsp;
           <input type="text" formControlName="RoomStatus" name="" id="" />
 
-          <button>submit</button>
+          <button (click)="roominfo()">submit</button>
+          <button (click)="deleteData()">delete</button>
         </form>
 
       <table id="DeactiveRoom">
@@ -127,7 +129,8 @@
 
       </table> </div>
 
-  
+
     </div>
   </div>
+  <br><br><br>
 </div>

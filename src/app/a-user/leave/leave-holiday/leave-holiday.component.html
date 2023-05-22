@@ -1,16 +1,23 @@
 <app-user-sidebar></app-user-sidebar>
 <div class="home_content">
-  <div class="container">
-    <!-- *ngFor="let eachData of userdata" -->
-    <div class="head"><h2>pongal</h2></div>
+  <div class="text">Holiday Deatils</div>
+<div class="container">
+  <div class="lContainer">
+    <img src="../../../../assets/To do list Customizable Flat Illustrations _ Rafiki Style.png" alt="">
+  </div>
+<div class="Rcontainer">
+  <div class="Rightcontainer" *ngFor="let eachData of  holiday">
+
+    <div class="head"><h2>{{ eachData.Event }}</h2></div>
     <div class="body">
-      <p>Event:pongal</p>
-      <p>From:20-01-2023</p>
-      <p>To:25-01-2023</p>
-      <!-- {{ eachData.mobile }} -->
+      <p>Event:{{ eachData.Event }}</p>
+      <p>From:{{ eachData.From }}</p>
+      <p>To:{{ eachData.To}}</p>
+
     </div>
     <div class="bottom">
-      <p>discription:Happy pongal holliday</p>
+      <p>description:{{ eachData.description }}</p>
     </div>
   </div>
+</div></div>
 </div>

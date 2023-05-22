@@ -5,7 +5,7 @@
   left: 78px;
   background: var(--sky-color);
   padding: 20px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
   transition: all 0.5s ease;
 
 }
@@ -243,20 +243,29 @@ p
   grid-template-columns: 1fr 1fr 1fr;
   margin-left: 50%;
 }
-.searchBtn
+.search
 {
   display: grid;
-  grid-template-columns: 20% 10% 10%;
+  grid-template-columns: 20% 3.5%;
   margin-bottom: 10px;
 
 }
-#searchBtn{
+#searchBox{
+  border: 1px solid blue;
+  border-radius: 5px;
   width: 100%;
-  border:2px solid blue;
-  margin-right:10px ;
 
 }
-#regHeading{
-  margin-left:100px ;
-  margin-top: 5px;
+#BtnSerach{
+
+  padding: 5px;
+  height: 40px;
+  width: 50px;
+  margin-top: 10px;
+
 }
+.search button i{
+text-align: center;
+
+}
+

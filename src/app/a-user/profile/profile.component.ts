@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpDbService } from 'src/app/httpDb.service';
 
 @Component({
@@ -10,16 +11,31 @@ import { HttpDbService } from 'src/app/httpDb.service';
 
 export class ProfileComponent implements OnInit {
   emailId:any=sessionStorage.getItem('emailDetails');
+  update:FormGroup
 
-  userdata:any;
-  constructor(private service:HttpDbService) {
+  constructor(private service:HttpDbService,private form:FormBuilder) {
+   this.update=this.form.group({
+    name:[,Validators.required],
+    regNo:[,Validators.required],
+    age:[,Validators.required],
+    email:[,Validators.required],
+    phoneno:[,Validators.required],
+    father:[,Validators.required],
+    mother:[,Validators.required],
+    address:[,Validators.required],
+    college:[,Validators.required],
+    Adharnumber:[,Validators.required],
+    room:[,Validators.required],
+
+
+   })
     // this.service.getregno().subscribe((data: any)=>{
     //   this.userdata=data;
     // })
   }
 
   id:any;
-
+  userdata:any='';
   Name:any;
   Register:any;
   Age:any;
@@ -36,6 +52,7 @@ export class ProfileComponent implements OnInit {
       this.userdata=data;
       for(var i=0;i<this.userdata.length;i++){
         if(this.emailId==this.userdata[i].Email){
+          console.log(this.emailId)
           this.id=i;
         }
       }
@@ -51,9 +68,49 @@ export class ProfileComponent implements OnInit {
       this. Adharnumber=this.userdata[this.id].Adharnumber;
       this.Room=this.userdata[this.id].roomnumber;
       this.Register=this.userdata[this.id].regNo;
+      this.id++;
+      this.update.controls['name'].setValue(this.Name);
+      this.update.controls['regNo'].setValue(this.Register);
+      this.update.controls['age'].setValue(this.Age);
+      this.update.controls['email'].setValue(this. email);
+       this.update.controls['phoneno'].setValue(this.phone);
+       this.update.controls['father'].setValue(this.Father);
+       this.update.controls['mother'].setValue(this.Age);
+       this.update.controls['address'].setValue(this.Address);
+       this.update.controls['college'].setValue(this.college);
+       this.update.controls['Adharnumber'].setValue(this.Adharnumber);
+       this.update.controls['room'].setValue(this.Room);
+
+      this.update.markAsPristine();
 
 
     })
   }
+   updateProfile(data:any){
 
+    alert(this.id);
+    if(!this.update.pristine){
+      let updated={
+       name: data.name,
+        regNo: data.regNo,
+        age: data.age,
+        email: data.email,
+        phoneno: data.mother,
+        father:data.Fathername,
+        mother:data.mothername,
+        address:data.permentaddress,
+        college:  data.collegename,
+        Adharnumber:data.Adharnumber,
+        room: data.age
+      }
+      this.service.updateProfile(updated,this.id).subscribe((Response)=>
+      {
+        console.log(updated);
+        alert("updated successfull");
+      })
+    }
+    else{
+        alert("data is not modified");
+    }
+   }
 }

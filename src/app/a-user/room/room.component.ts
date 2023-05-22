@@ -24,7 +24,8 @@ export class RoomComponent implements OnInit {
 
 
 })
-exchange(){
+room(){
+  this.service.updateRoomQy(this.ExchangeForm.value) .subscribe((data) => alert('sucessfully added'));
 
 }
   ngOnInit() {

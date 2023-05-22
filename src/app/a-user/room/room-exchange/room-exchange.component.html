@@ -69,7 +69,7 @@
           <option value="" disabled selected>status</option>
 
 
-          <option>Exchange</option>
+
           <option>vacate</option>
         </select>
         <div *ngIf="ExchangeForm.controls['Status'].dirty" class="alert">
@@ -97,10 +97,30 @@
               Enter proper User Name
             </p> -->
           </div>
+          <br>
+        </div>
+
+          <div class="date">
+            <input
+              type="date"
+
+             
+              formControlName="date"
+              id=""
+            />
+            <div *ngIf="ExchangeForm.controls['date'].dirty" class="alert">
+              <p *ngIf="ExchangeForm.controls['date'].errors?.['required']">
+                User name should not be Empty
+              </p>
+
+            </div>
+
         </div>
 
         <button type="submit" id="submit">submit</button><br /><br />
+
       </form>
     </div>
+
   </div>
 

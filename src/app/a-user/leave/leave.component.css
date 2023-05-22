@@ -36,6 +36,7 @@
   height: 55%;
   width: 100%;
   text-align: center;
+  position: fixed;
 
 }
 .room-detail{
@@ -49,7 +50,7 @@ input{
 border-radius: 1px;
 font-size: 16px;
 letter-spacing: 3px;
-width: 50%;
+width: 60%;
 text-align: center;
 border: none;
 border-bottom: 1px solid rgb(23, 21, 21);
@@ -57,7 +58,7 @@ outline: none;
 
 background: none;
 color: rgb(22, 22, 22);
-padding: 2%;
+padding: 3%;
 margin-bottom: 1.5%;
 }
 .top1 h1,p,i{
@@ -81,4 +82,13 @@ margin-top: 1%;
 border-radius: 5px;
 
 
+}
+
+
+.alert{
+  color: red;
+  position: absolute;
+}
+.room-quries{
+  margin-right: 20%;
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { HttpDbService } from 'src/app/httpDb.service';
 
 @Component({
   selector: 'app-leave-holiday',
@@ -7,7 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeaveHolidayComponent implements OnInit {
 
-  constructor() { }
+ holiday: any;
+  constructor( private service:HttpDbService,private fb:FormBuilder)  {
+    this.service.  getTime().subscribe((data: any)=>{
+      this.holiday=data;
+    }  )
+  }
 
   ngOnInit() {
   }

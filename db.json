@@ -66,33 +66,6 @@
       "feesStatus": "unpaid",
       "roomno": "002",
       "id": 2
-    },
-    {
-      "Name": null,
-      "email": null,
-      "phone": null,
-      "register": null,
-      "feesStatus": null,
-      "roomno": null,
-      "id": 3
-    },
-    {
-      "Name": "",
-      "email": "",
-      "phone": null,
-      "register": null,
-      "feesStatus": null,
-      "roomno": null,
-      "id": 4
-    },
-    {
-      "Name": null,
-      "email": null,
-      "phone": null,
-      "register": null,
-      "feesStatus": null,
-      "roomno": null,
-      "id": 5
     }
   ],
   "admin": [
@@ -112,23 +85,9 @@
       "permentaddress": "trichy",
       "collegename": "ksr",
       "Adharnumber": "422123233",
-      "roomnumber": null,
+      "roomnumber": "0001",
       "regNo": "1915003",
-      "id": 3
-    },
-    {
-      "name": null,
-      "mobile": null,
-      "age": null,
-      "Fathername": null,
-      "mothername": null,
-      "Email": null,
-      "permentaddress": null,
-      "collegename": null,
-      "Adharnumber": null,
-      "roomnumber": null,
-      "regNo": null,
-      "id": 4
+      "id": 1
     },
     {
       "name": "Hari",
@@ -140,9 +99,9 @@
       "permentaddress": "salem",
       "collegename": "ksr",
       "Adharnumber": "6788 6544 7890",
-      "roomnumber": null,
+      "roomnumber": "0002",
       "regNo": "1915004",
-      "id": 5
+      "id": 2
     },
     {
       "name": "dinesh",
@@ -154,23 +113,26 @@
       "permentaddress": "Namakkal",
       "collegename": "ksr",
       "Adharnumber": "9876 6543 6789",
-      "roomnumber": null,
+      "roomnumber": "0003",
       "regNo": "1915005",
-      "id": 6
+      "id": 3
     },
     {
       "name": "Mani",
       "mobile": "9876543210",
-      "age": "21",
+      "age": "24",
       "Fathername": "kavin",
       "mothername": "kala",
       "Email": "mani123@gmail.com",
       "permentaddress": "salem",
       "collegename": "ksr",
       "Adharnumber": "7659 2356 6784",
-      "roomnumber": null,
-      "regNo": "1915006",
-      "id": 7
+      "roomnumber": "0004",
+      "regNo": "1915008",
+      "id": 4,
+      "room": "24",
+      "email": "mani123@gmail.com",
+      "phoneno": "24"
     }
   ],
   "AddRoomData": [
@@ -205,19 +167,14 @@
   ],
   "RoomData": [
     {
-      "RoomNo": "01",
+      "RoomNo": "02",
       "RoomStatus": "filled",
       "id": 1
     },
     {
-      "RoomNo": "02",
-      "RoomStatus": "filled",
-      "id": 2
-    },
-    {
       "RoomNo": "12",
       "RoomStatus": "filled",
-      "id": 3
+      "id": 2
     }
   ],
   "attendanceData": [
@@ -230,22 +187,51 @@
       "id": 1
     },
     {
-      "Name": null,
-      "phone": null,
-      "status": null,
-      "roomno": null,
-      "id": 2
-    },
-    {
-      "Name": "hjjj",
-      "phone": null,
-      "status": null,
-      "roomno": null,
+      "Name": "mani",
+      "phone": "9874563210",
+      "status": "present",
+      "roomno": "004",
       "id": 3
     }
   ],
   "MessData": [],
-  "room_exchange": [],
+  "vacated": [],
+  "room_vacate": [
+    {
+      "namevalue": "mani",
+      "Status": "vacate",
+      "mobilevalue": 9853149331,
+      "RoomNo": 5526,
+      "Reason": "College leave so i vacate my room",
+      "date": "2023-06-02",
+      "id": 1
+    },
+    {
+      "namevalue": "hari",
+      "Status": "vacate",
+      "mobilevalue": 9853149334,
+      "RoomNo": 5527,
+      "Reason": "College leave so i vacate my room",
+      "date": "2023-06-02",
+      "id": 2
+    },
+    {
+      "namevalue": "ganesh",
+      "Status": "vacate",
+      "mobilevalue": 9853149334,
+      "RoomNo": 5528,
+      "Reason": "College leave so i vacate my room",
+      "date": "2023-06-02",
+      "id": 3
+    },
+    {
+      "Status": null,
+      "RoomNo": null,
+      "Reason": "2023-06-02",
+      "date": "2023-06-02",
+      "id": 4
+    }
+  ],
   "user_attendance": [
     {
       "Name": "arun",
@@ -318,6 +304,45 @@
       "roomno": "1",
       "date": "31-01-2023",
       "id": 9
+    }
+  ],
+  "leaveQy": [
+    {
+      "namevalue": "sdfghjkl",
+      "emailvalue": null,
+      "mobilevalue": 9874563210,
+      "Subject": "dfghjkl",
+      "Reason": "sdfghjk",
+      "RoomNo": 2232,
+      "id": 1
+    }
+  ],
+  "MessQy": [
+    {
+      "namevalue": "asdfghjkl",
+      "emailvalue": null,
+      "mobilevalue": 9874532103,
+      "Subject": "kjhg",
+      "Reason": "kjhgf",
+      "RoomNo": 9851,
+      "id": 1
+    }
+  ],
+  "RoomQy": [],
+  "holiday": [
+    {
+      "Event": "pongal",
+      "From": "20-01-2023",
+      "To:": "25-01-2023",
+      "description": "Happy pongal holliday",
+      "id": 1
+    },
+    {
+      "Event": "Diwali",
+      "From": "20-11-2023",
+      "To": "25-11-2023",
+      "description": "Happy Diwali holliday",
+      "id": 2
     }
   ]
 }

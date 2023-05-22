@@ -20,6 +20,7 @@ export class RoomExchangeComponent implements OnInit {
     mobilevalue:[,Validators.required],
     RoomNo:[,Validators.required],
     Reason:[,Validators.required],
+    date:[,Validators.required],
 
 
 })
@@ -28,8 +29,8 @@ mail:any;
 mobil:any;
 descrip:any;
 exchange(){
-  return this.service.addstudent(this.ExchangeForm.value).subscribe((data)=>
-  alert("sucessfully added")
+  return this.service.exchangeinfo(this.ExchangeForm.value).subscribe((data)=>{ alert("sucessfully added");}
+
   )
 }
 

@@ -9,6 +9,13 @@
   transition: all 0.5s ease;
   overflow-y: scroll;
 }
+
+.home_content .text {
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--light-black);
+  margin-bottom: 15px;
+}
 ul li
 {
   list-style: none;

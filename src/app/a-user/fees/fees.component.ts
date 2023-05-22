@@ -8,16 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class FeesComponent implements OnInit {
 
   constructor() { }
-  // const modal = document.querySelector('#modal');
-  //  const openModal = document.querySelector('#menu_show');
-  //  const closeModal = document.querySelector('#close_show');
-  //  openModal.addEventListener('click', () => {
-  //
-  //  });
 
-  //  closeModal.addEventListener('click', () => {
-  //     modal.close();
-  //  })
   menu_show(){
     const modal:any = document.querySelector('#modal');
     const openModal:any = document.querySelector('#menu_show');

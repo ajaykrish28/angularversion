@@ -1,22 +1,58 @@
-<app-user-sidebar></app-user-sidebar>
+  <app-user-sidebar></app-user-sidebar>
 <div class="home_content">
+
   <div class="text">Profile</div>
+  <form action="" [formGroup]="update">
   <div class="container">
- <p> <strong>Name</strong> <span>{{Name}}</span>  </p>
- <p> <strong>Register number</strong>  <span>{{ Register}}</span> </p>
- <p><strong>Age:</strong>  <span>{{ Age}}</span> </p>
- <p><strong>Email Id:</strong> <span>{{email}}</span> </p>
- <p><strong>phone no:</strong>  <span> {{ phone}}</span> </p>
- <p> <strong>Father Name:</strong><span>{{Father }}</span>  </p>
- <p> <strong>Mother Name:</strong>  <span>{{Mother}}</span></p>
- <p> <strong>Address:</strong> <span>{{Address }}</span>  </p>
+    <div class="form_grid">
+ <p> <strong>Name:</strong>   </p>
+ <input type="text" formControlName="name">
+</div>
+<div class="form_grid">
+ <p> <strong>Register number:</strong></p>
+ <input type="text" formControlName="regNo">
+</div>
+ <div class="form_grid">
+ <p><strong>Age:</strong></p>
+ <input type="text" formControlName="age">
+</div>
+ <div class="form_grid">
+ <p><strong>Email Id:</strong> </p>
+ <input type="text" formControlName="email" >
+</div>
+ <div class="form_grid">
+ <p><strong>phone no:</strong>  </p>
+ <input type="text" formControlName="phoneno" >
+</div>
+ <div class="form_grid">
+ <p> <strong>Father Name:</strong>  </p>
+ <input type="text" formControlName="father" >
+</div>
+ <div class="form_grid">
+ <p> <strong>Mother Name:</strong>  </p>
+ <input type="text" formControlName="mother" >
+</div>
+ <div class="form_grid">
+ <p> <strong>Address:</strong>  </p>
+ <input type="text" formControlName="address">
+</div>
+ <div class="form_grid">
+ <p> <strong>college Name:</strong>  </p>
+ <input type="text" formControlName="college">
+</div>
+ <div class="form_grid">
+ <p> <strong>Adharnumber:</strong>  </p>
+ <input type="text" formControlName="Adharnumber">
+</div>
+ <div class="form_grid">
+ <p>  <strong>Room no:</strong> </p>
+ <input type="text" formControlName="room"></div>
 
- <p> <strong>college Name:</strong>  <span>{{college }}</span> </p>
- <p> <strong>Adharnumber:</strong>  <span>{{Adharnumber }}</span> </p>
- <p>  <strong>Room no:</strong>  <span> {{Room}}</span></p>
 
 </div>
-
-
+ <button (click)="updateProfile(update.value)">update</button>
+</form>
+<br><br>
 </div>
+
 

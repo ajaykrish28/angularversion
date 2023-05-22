@@ -27,6 +27,7 @@ import { MessMenuComponent } from './a-user/mess/mess-menu/mess-menu.component';
 import { MessTimeComponent } from './a-user/mess/mess-time/mess-time.component';
 import { LeaveHolidayComponent } from './a-user/leave/leave-holiday/leave-holiday.component';
 import { AdminDashComponent } from './a-admin/admin-dash/admin-dash.component';
+import { VacatingComponent } from './a-admin/vacating/vacating.component';
 
 
 
@@ -49,6 +50,7 @@ const routes: Routes = [
   { path: "leaveform", component: Admin_leaveComponent},
   { path: "Mess", component:AdminMessComponent},
   { path: "admincret", component:AdminCredComponent},
+  { path: "vacate", component:VacatingComponent},
 
   //-user
   { path: "logcred", component: AdminCredComponent },
