@@ -12,11 +12,12 @@ import { HttpDbService } from 'src/app/httpDb.service';
 })
 export class RoomComponent implements OnInit {
 
-  constructor( private service:HttpDbService,private fb:FormBuilder) { }
+  constructor( private service:HttpDbService,private fb:FormBuilder, private route: Router) { }
+
 
   ExchangeForm= this.fb.group({
     namevalue:[,Validators.required],
-    emailvalue:[,Validators.required],
+
     mobilevalue:[,Validators.required],
     Subject:[,Validators.required],
     Reason:[,Validators.required],
@@ -28,7 +29,20 @@ room(){
   this.service.updateRoomQy(this.ExchangeForm.value) .subscribe((data) => alert('sucessfully added'));
 
 }
-  ngOnInit() {
+allowAcces():boolean{
+  if(sessionStorage.getItem('login')== 'true'||sessionStorage.getItem('login')!=null){
+    return true;
   }
-
+  else{
+    return false;
+  }
+  }
+  ngOnInit() {
+    this.empty();
+  }
+  empty(){
+    if(!this.allowAcces()){
+      this.route.navigate(['/login']);
+    }
+  }
 }

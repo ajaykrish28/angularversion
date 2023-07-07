@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-sidebar',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserSidebarComponent implements OnInit {
 
-  constructor() { }
+  constructor( private route: Router) { }
   openSideBar(){
     let  home_content:any="";
      let btn:any = document.querySelector("#btn");
@@ -18,7 +19,17 @@ export class UserSidebarComponent implements OnInit {
 
 
   }
+
+  failure:any=false;
+  logout(){
+    sessionStorage.setItem('login',this.failure);
+    console.log('log out');
+    this.route.navigate(['/login']);
+  }
   ngOnInit() {
+
+
+
   }
 
 }

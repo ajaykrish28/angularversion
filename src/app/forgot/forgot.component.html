@@ -1,0 +1,16 @@
+
+<app-hom3_nav></app-hom3_nav>
+<div class="container">
+  <h2>Forgot Password</h2>
+  <form  [formGroup]="LoginForm"  (submit)="loginform()">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email"  formControlName="emailvalue" pattern= "^[0-9a-zA-Z]+[._]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$" >
+    <div *ngIf="LoginForm.controls['emailvalue'].dirty" class="alert">
+      <p *ngIf="LoginForm.controls['emailvalue'].errors?.['required']">Email should not be Empty</p>
+      <p *ngIf="LoginForm.controls['emailvalue'].errors?.['pattern']">Enter a valid Email</p>
+    </div>
+    <input type="submit" value="Submit" [disabled]="LoginForm.invalid">
+  </form>
+</div>
+<br><br><br><br><br><br><br><br>
+<app-home3_footer></app-home3_footer>

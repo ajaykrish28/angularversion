@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { RegcredService } from 'src/app/admin-cred/regcred.service';
-
+import { Route, Router } from '@angular/router';
 @Component({
   selector: 'app-leaveform',
   templateUrl: './leaveform.component.html',
@@ -18,7 +18,7 @@ export class LeaveformComponent implements OnInit {
   password1: any;
   cp1: any;
 
-  constructor(private fb:FormBuilder,private regcred:RegcredService) { }
+  constructor(private fb:FormBuilder,private regcred:RegcredService,private route: Router) { }
   feesform=this.fb.group({
     namevalue:[,Validators .required],
     emailvalue:[,Validators .required],
@@ -44,9 +44,23 @@ export class LeaveformComponent implements OnInit {
   })
 
 }
+allowAcces():boolean{
+  if(sessionStorage.getItem('Adminlogin')== 'true'||sessionStorage.getItem('Adminlogin')!=null){
+    return true;
+  }
+  else{
+    return false;
+  }
+  }
+empty(){
+  if(!this.allowAcces()){
+    this.route.navigate(['/login']);
+  }
+}
 // feesSubmit(){
 
 // }
   ngOnInit() {
+    this.empty();
   }
 }

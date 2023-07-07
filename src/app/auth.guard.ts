@@ -20,8 +20,21 @@ constructor(private authService:AuthService,private route:Router){}
 
     }
 
-  }
+
+  // canActivate(
+  //   route: ActivatedRouteSnapshot,
+  //   state: RouterStateSnapshot): boolean {
+  //     if(this.authService.isUserLogin()) {
+  //       alert("You are not login to view this page !!");
+  //       this.route.navigate(['login'], {queryParams: {retUrl:route.url}});
+  //       return false;
+  //     } else {
+  //       return true;
+  //     }
+
+  // }
 
   }
 
 
+}

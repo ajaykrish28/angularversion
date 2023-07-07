@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { HttpDbService } from 'src/app/httpDb.service';
-
+import { Route, Router } from '@angular/router';
 @Component({
   selector: 'app-admin_leave',
   templateUrl: './admin_leave.component.html',
@@ -10,7 +10,7 @@ import { HttpDbService } from 'src/app/httpDb.service';
 export class Admin_leaveComponent implements OnInit {
   feesstatus: any;
 
-  constructor(private fb:FormBuilder,private http:HttpDbService) {
+  constructor(private fb:FormBuilder,private http:HttpDbService,private route: Router) {
     this.http. getattendanceinfo().subscribe((data:any)=>{
        this.feesstatus=data;
 
@@ -38,7 +38,7 @@ export class Admin_leaveComponent implements OnInit {
   feesgrp=this.fb.group({
     Name:[,Validators.required],
 
-    phone:[,Validators.required],
+    mobile:[,Validators.required],
 
     status:[,Validators.required],
     roomno:[,Validators.required]
@@ -54,8 +54,23 @@ export class Admin_leaveComponent implements OnInit {
 
 
   }
+  allowAcces():boolean{
+    if(sessionStorage.getItem('Adminlogin')== 'true'||sessionStorage.getItem('Adminlogin')!=null){
+      return true;
+    }
+    else{
+      return false;
+    }
+    }
+
+  empty(){
+    if(!this.allowAcces()){
+      this.route.navigate(['/login']);
+    }
+  }
 
   ngOnInit() {
+    this.empty();
   }
 
 }

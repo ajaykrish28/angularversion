@@ -24,13 +24,16 @@
 }
 /* .fees_container */
 .fees_container{
-  background:  aliceblue;
-
+  border-bottom: 15px solid blue;
+  border-radius: 10px;
  margin-top: 5%;
  margin-right: 5%;
  margin-left: 5%;
  display: none;
  margin-bottom: 5%;
+position: relative;
+box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
 
 
 }
@@ -38,7 +41,10 @@
 
 
 
-  color:rgb(19, 18, 18);
+  border-radius: 10px;
+  padding: 2px;
+  text-align: center;
+  color: rgb(19, 18, 18);
 }
 
 .manageDetails{
@@ -150,20 +156,23 @@ select
   width: 80%;
 }
 .fees_container button{
-  color: rgb(40, 35, 35);
-padding: 2%;
+  background-color: blue;
+  position: relative;
+  color: white;
+  padding: 2%;
   margin: 3%;
-  margin-left: 70%;
+  left: 85%;
   border: none;
   cursor: pointer;
 
 
 }
 
-.fees_container label{
+.fees_container label {
   padding: 10px;
   margin: 10px;
   margin-top: 10px;
+  font-size: large;
 }
 .fees_container input{
   padding: 10px;
@@ -206,4 +215,23 @@ p
   text-align: left;
   background-color: #0420aa;
   color: white;
+}
+
+#solve
+{
+  color: white;
+  background-color: blue;
+  padding: 5px;
+  margin: 5px;
+  margin-left: 10px;
+
+}
+.alert{
+  color: red;
+  position: absolute;
+  margin-bottom: 6px;
+
+}
+.hoverBox:hover{
+  transform: scale(1.01);
 }

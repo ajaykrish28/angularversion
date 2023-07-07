@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private http: HttpClient,
-    private route: Router
+    private route: Router,
+    private authService:AuthService,
   ) {}
   LoginForm = this.fb.group({
     username: [, Validators.required],
@@ -23,10 +25,12 @@ export class LoginComponent implements OnInit {
     confirmpasswordvalue: [, Validators.required]
   });
   error: boolean = false;
+success:any=true;
+  failure:boolean=false;
 
   loginform(email:any) {
     console.log(email);
-    
+
     sessionStorage.setItem('emailDetails',email)
     this.user();
     this.admin();
@@ -46,9 +50,13 @@ export class LoginComponent implements OnInit {
 
       if (user) {
         alert('login sucessful');
+
+        sessionStorage.setItem('login',this.success);
         this.LoginForm.reset();
         this.route.navigate(['/Profile-user']);
-
+// this.authService.userLogin(this.LoginForm.value.emailvalue,this.LoginForm.value.passwordvalue ).subscribe((data)=>{
+//   this.route.navigate(['/Profile-user']);
+// })
       }
       this.error = false;
     });
@@ -63,8 +71,15 @@ export class LoginComponent implements OnInit {
 
       if (user) {
         alert('login sucessful');
+        sessionStorage.setItem('Adminlogin',this.success);
         this.LoginForm.reset();
         this.route.navigate(['/Room']);
+        // this.authService.userLogin(this.LoginForm.value.emailvalue,this.LoginForm.value.passwordvalue ).subscribe((data)=>{
+        //   this.route.navigate(['/Room']);
+        // })
+
+
+
       } else {
         this.error = true;
       }

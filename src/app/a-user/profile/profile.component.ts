@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpDbService } from 'src/app/httpDb.service';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -13,7 +14,7 @@ export class ProfileComponent implements OnInit {
   emailId:any=sessionStorage.getItem('emailDetails');
   update:FormGroup
 
-  constructor(private service:HttpDbService,private form:FormBuilder) {
+  constructor(private service:HttpDbService,private form:FormBuilder, private route: Router) {
    this.update=this.form.group({
     name:[,Validators.required],
     regNo:[,Validators.required],
@@ -29,10 +30,16 @@ export class ProfileComponent implements OnInit {
 
 
    })
-    // this.service.getregno().subscribe((data: any)=>{
-    //   this.userdata=data;
-    // })
+
   }
+  allowAcces():boolean{
+    if(sessionStorage.getItem('login')== 'true'||sessionStorage.getItem('login')!=null){
+      return true;
+    }
+    else{
+      return false;
+    }
+    }
 
   id:any;
   userdata:any='';
@@ -85,6 +92,7 @@ export class ProfileComponent implements OnInit {
 
 
     })
+    // this.empty();
   }
    updateProfile(data:any){
 
@@ -113,4 +121,23 @@ export class ProfileComponent implements OnInit {
         alert("data is not modified");
     }
    }
+
+   menu_show(){
+    const modal:any = document.querySelector('#modal');
+    const openModal:any = document.querySelector('#menu_show');
+    const closeModal:any = document.querySelector('#close_show');
+    modal.showModal();
+
+  }
+  close_show(){   const modal:any = document.querySelector('#modal');
+  const openModal:any = document.querySelector('#menu_show');
+  const closeModal:any = document.querySelector('#close_show');
+  modal.close();
+
+  }
+  empty(){
+    if(!this.allowAcces()){
+      this.route.navigate(['/login']);
+    }
+  }
 }

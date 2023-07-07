@@ -1,69 +1,120 @@
 <app-SideBar></app-SideBar>
 <div class="home_content">
-  <div class="text">Mess</div>
+  <div class="text">Mess Details</div>
   <!-- manageDetails -->
   <div class="manageDetails">
-    <div class="viewDetails">
-      <h1>view mess status</h1>
+    <div class="viewDetails  hoverBox">
+      <h1>View Mess Status</h1>
       <i class="bx bx-user bx-md"></i>
-      <p>Here you can see feedback Details of the student</p>
+      <p>Here you can see feedback details of the student</p>
 
-      <button id="viewbtn" (click)="viewbtn()">view</button>
+      <button id="viewbtn" (click)="viewbtn()">View</button>
     </div>
-    <div class="updates">
-      <h1>updates menu status</h1>
+    <div class="updates hoverBox">
+      <h1>Menu Details Updation</h1>
       <i class="bx bx-cloud-upload bx-md"></i>
       <p>Here you can see the update menu details</p>
 
-      <button id="update_btn" (click)="update_btn()">updates</button>
+      <button id="update_btn" (click)="update_btn()">Update</button>
     </div>
   </div>
   <!-- table_view -->
   <div class="table_view">
     <table id="table_view">
       <tr>
-        <th>s.no</th>
+        <th>S.No</th>
         <th>Name</th>
-        <th>Email id</th>
-        <th>Phone number</th>
 
-        <th>Register number</th>
-        <th>feedback</th>
+        <th>Phone Number</th>
+        <th>Subject</th>
 
+        <th>Room Number</th>
+        <th>Feedback</th>
+        <th>Status</th>
       </tr>
       <!-- data 1 -->
-      <tr *ngFor="let filled of feesstatus">
-        <td>{{ filled.id }}</td>
-        <td>{{ filled.Name }}</td>
-        <td>{{ filled.email }}</td>
-        <td>{{ filled.phone }}</td>
-        <td>{{ filled.register }}</td>
-       
-        <td>{{ filled.feesStatus }}</td>
+      <tr *ngFor="let filled of meessReview; index as i">
+        <td>{{ i + 1 }}</td>
+        <td>{{ filled.namevalue }}</td>
+        <td>{{ filled.mobilevalue }}</td>
+        <td>{{ filled.Subject }}</td>
+        <td>{{ filled.Reason }}</td>
+
+        <td>{{ filled.RoomNo }}</td>
+        <button id="solve" (click)="deletedata(filled.id)">Resolved</button>
       </tr>
     </table>
   </div>
 
   <!-- fees_container -->
   <div class="fees_container">
-    <div class="fees_container_head"><h2>Fees</h2></div>
-    <form [formGroup]="feesgrp" (submit)="feesform()">
+    <div class="fees_container_head"><h2>Menu Update</h2></div>
+    <form [formGroup]="MessMenu" (submit)="feesform()">
       <div class="rightForm">
         <label for="">Morning</label> <br />
-        <input type="text" name="" id="" formControlName="Name" /> <br />
+        <input type="text" name="" id="" formControlName="mrg" /> <br />
+        <div *ngIf="MessMenu.controls['mrg'].dirty" class="alert">
+          <p *ngIf="MessMenu.controls['mrg'].errors?.['required']">
+            Morning menu should not be empty
+          </p>
+        </div>
+        <br />
+        <input type="text" name="" id="" formControlName="mrg2" /> <br />
 
+        <div *ngIf="MessMenu.controls['mrg2'].dirty" class="alert">
+          <p *ngIf="MessMenu.controls['mrg2'].errors?.['required']">
+            Morning menu should not be empty
+          </p>
+        </div>
+        <br />
         <label for="">Afternoon</label> <br />
-        <input type="text" name="" id="" formControlName="email" /> <br />
+        <input type="text" name="" id="" formControlName="afternoon" /> <br />
+        <div *ngIf="MessMenu.controls['afternoon'].dirty" class="alert">
+          <p *ngIf="MessMenu.controls['afternoon'].errors?.['required']">
+            Afternoon menu should not be empty
+          </p>
+        </div> <br>
+        <input type="text" name="" id="" formControlName="afternoon2" /> <br />
+
+
+      <div *ngIf="MessMenu.controls['afternoon2'].dirty" class="alert">
+        <p *ngIf="MessMenu.controls['afternoon2'].errors?.['required']">
+          Afternoon menu should not be empty
+        </p>
       </div>
+      <br />  </div>
       <div class="lesftForm">
         <label for="">Evening Snack</label> <br />
-        <input type="text" name="" id="" formControlName="phone" /> <br />
+        <input type="text" name="" id="" formControlName="evening" /> <br />
+        <div *ngIf="MessMenu.controls['evening'].dirty" class="alert">
+          <p *ngIf="MessMenu.controls['evening'].errors?.['required']">
+            Evening menu should not be empty
+          </p>
+        </div> <br>
+        <input type="text" name="" id="" formControlName="evening2" /> <br />
 
-        <label for="">night</label> <br />
-        <input type="text" name="" id="" formControlName="register" /> <br />
-      </div>
+        <div *ngIf="MessMenu.controls['evening2'].dirty" class="alert">
+          <p *ngIf="MessMenu.controls['evening2'].errors?.['required']">
+            Evening menu should not be empty
+          </p>
+        </div> <br>
+        <label for="">Night</label> <br />
+        <input type="text" name="" id="" formControlName="night" /> <br />
+        <div *ngIf="MessMenu.controls['night'].dirty" class="alert">
+          <p *ngIf="MessMenu.controls['night'].errors?.['required']">
+            Night menu should not be empty
+          </p>
+        </div> <br>
+        <input type="text" name="" id="" formControlName="night2" /> <br />
+
+
+      <div *ngIf="MessMenu.controls['night2'].dirty" class="alert">
+        <p *ngIf="MessMenu.controls['night2'].errors?.['required']">
+          Night menu should not be empty
+        </p>
+      </div> <br>   </div>
       <div class="login-box">
-        <button>submit</button>
+        <button>Submit</button>
       </div>
     </form>
   </div>

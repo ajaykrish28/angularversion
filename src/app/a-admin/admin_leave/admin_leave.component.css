@@ -24,21 +24,25 @@
 }
 /* .fees_container */
 .fees_container{
-  background:  aliceblue;
 
+  border-bottom: 15px solid blue;
+  border-radius: 10px;
  margin-top: 5%;
  margin-right: 5%;
  margin-left: 5%;
  display: none;
  margin-bottom: 5%;
-
+position: relative;
+box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 
 }
 .fees_container_head  {
 
 
-
-  color:rgb(19, 18, 18);
+  border-radius: 10px;
+  padding: 2px;
+  text-align: center;
+  color: rgb(19, 18, 18);
 }
 
 .manageDetails{
@@ -150,20 +154,22 @@ select
   width: 80%;
 }
 .fees_container button{
-  color: rgb(40, 35, 35);
-padding: 2%;
+  background-color: blue;
+  position: relative;
+  color: white;
+  padding: 2%;
   margin: 3%;
-  margin-left: 70%;
+  left: 85%;
   border: none;
   cursor: pointer;
-
 
 }
 
 .fees_container label{
   padding: 10px;
   margin: 10px;
-  margin-top: 10px;
+  margin-top: 20px;
+  font-size: larger;
 }
 .fees_container input{
   padding: 10px;
@@ -206,4 +212,13 @@ p
   text-align: left;
   background-color: #0420aa;
   color: white;
+}
+.alert
+{
+  color: red;
+margin-left: 15px;
+font-size: medium;
+}
+form {
+  margin-left: 80px;
 }

@@ -3,19 +3,19 @@
   <div class="text">Students Profile</div>
   <div class="manageDetails">
     <div class="viewDetails">
-      <h1>view Profiles</h1>
+      <h1> Profiles</h1>
       <i class="bx bx-user bx-md"></i>
-      <p>Here you can see the Student Profile Details</p>
+      <p>Here you can see the students profile details</p>
 
-      <button id="viewbtn" (click)="show_view()">view</button>
+      <button id="viewbtn" (click)="show_view()">View</button>
     </div>
     <div class="updates">
-      <h1>updates</h1>
+      <h1>Updates</h1>
 
       <i class="bx bx-cloud-upload bx-md"></i>
-      <p>Here you can see the update</p>
+      <p>Here you can see the updates</p>
 
-      <button id="update_btn" (click)="show_update()">updates</button>
+      <button id="update_btn" (click)="show_update()">View</button>
     </div>
   </div>
   <div class="Table_Info">
@@ -24,7 +24,7 @@
         <input
           type="text"
           id="searchBox"
-          placeholder="search"
+          placeholder="Search"
           [(ngModel)]="sort"
         />
         <button id="BtnSerach" (click)="search()">
@@ -42,8 +42,8 @@
 
           <th>Age</th>
 
-          <th>Father name</th>
-          <th>Mother name</th>
+          <th>Father Name</th>
+          <th>Mother Name</th>
           <th>Email id</th>
           <th>Address</th>
           <th>College Name</th>
@@ -64,6 +64,8 @@
           <td>{{ eachData.collegename }}</td>
           <td>{{ eachData.Adharnumber }}</td>
           <td>{{ eachData.roomnumber }}</td>
+
+
         </tr>
         <tbody *ngIf="hide">
           <tr *ngFor="let item of data">
@@ -86,18 +88,18 @@
 
       </table>
 
-     
+
     </div>
 
     <div class="table_updates">
       <div class="update_container_head">Profile updation</div>
 
-      <form action="" [formGroup]="newstudent">
+      <form action="" [formGroup]="newstudent"  (ngSubmit)="studentinfo()">
         <div class="table_1">
           <label for="">Name</label><br />
           <input
             type="text"
-            placeholder="name"
+            placeholder="Name"
             formControlName="name"
             pattern="^[a-zA-Z]+$"
           />
@@ -110,10 +112,10 @@
             </p>
           </div>
           <br />
-          <label for="">Register Nomber</label> <br />
+          <label for="">Register Number</label> <br />
           <input
             type="text"
-            placeholder="Register Nomber"
+            placeholder="Register Number"
             formControlName="regNo"
             pattern="^[0-9]\d{6}$"
           />
@@ -126,10 +128,10 @@
             </p>
           </div>
           <br />
-          <label for="">Mobile</label> <br />
+          <label for="">Mobile Number</label> <br />
           <input
             type="text"
-            placeholder="mobile"
+            placeholder="Mobile Number"
             formControlName="mobile"
             pattern="^[6-9]\d{9}$"
           />
@@ -146,7 +148,7 @@
           <label for="">Age</label><br />
           <input
             type="text"
-            placeholder="age"
+            placeholder="Age"
             formControlName="age"
             pattern="^[0-9]\d{1}$"
           />
@@ -162,7 +164,7 @@
           <label for="">Father Name</label><br />
           <input
             type="text"
-            placeholder="Father name"
+            placeholder="Father Name"
             formControlName="Fathername"
           />
           <div *ngIf="newstudent.controls['Fathername'].dirty" class="alert">
@@ -177,7 +179,7 @@
           <label for="">Mother Name</label><br />
           <input
             type="text"
-            placeholder="mother name"
+            placeholder="Mother Name"
             formControlName="mothername"
           />
           <div *ngIf="newstudent.controls['mothername'].dirty" class="alert">
@@ -209,7 +211,7 @@
           <label for="">Address</label><br />
           <input
             type="text"
-            placeholder="perment address"
+            placeholder="Address"
             formControlName="permentaddress"
           />
           <div
@@ -227,7 +229,7 @@
           <label for="">College Name</label><br />
           <input
             type="text"
-            placeholder="college name"
+            placeholder="College Name"
             formControlName="collegename"
             pattern="^[a-zA-Z]+$"
           />
@@ -247,23 +249,24 @@
             formControlName="Adharnumber"
           /><br />
           <label for="">Room Number</label><br />
-          <select name="" type="text" id="" formControlName="feesStatus">
-            <option value="" disabled selected>status</option>
+          <select name="" type="text" id="" formControlName="roomnumber">
+            <option   value="" disabled selected>status</option>
 
-            <option value="unpaid" *ngFor="let roomupdate of room">
+            <option  value="unpaid" *ngFor="let roomupdate of room">
               {{ roomupdate.RoomNo }}
-            </option></select
-          ><br />
+            </option></select ><br />
         </div>
         <div class="butn_grid">
-          <button id="Save" (click)="studentinfo()">Save</button>
 
-          <button id="delete" (click)="deleteData()">delete</button>
+          <button type="submit" id="submit" [disabled]="newstudent.invalid" >Submit</button><br><br>
+
         </div>
 
         <br /><br />
       </form>
+      <button id="delete" (click)="deleteData()">Delete</button>
       <br /><br />
     </div>
   </div>
+  <br> <br><br>
 </div>

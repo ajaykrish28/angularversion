@@ -25,9 +25,7 @@
   margin-bottom: 15px;
 }
 
-.home_content p {
-  margin-bottom: 15px;
-}
+
  .fees{
     width: 80%;
     height: 600px;
@@ -86,7 +84,9 @@
  .modal{
   margin: auto;
   width: 70%;
-  height: 80%;
+  height: 80%; border: none;
+  border-bottom:15px solid blue ;
+  border-top:5px solid blue ;
 
  }
 
@@ -120,8 +120,20 @@
   margin-right: 250%;
 }
 #menu_show{
-  margin-left: 9%;
-  padding: 15px;
+  /* margin-left: 9%; */
+  padding: 10px;
   padding-left: 20px;
   padding-right: 20px;
+}
+.paymethod input{
+  width: 60%;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.alert{
+  color: red;
+  position: absolute;
+  margin-bottom: 6px;
+
 }

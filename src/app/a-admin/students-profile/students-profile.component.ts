@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { HttpDbService } from 'src/app/httpDb.service';
 import { Location } from '@angular/common';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-students-profile',
@@ -18,7 +19,8 @@ export class StudentsProfileComponent implements OnInit {
     private service: HttpDbService,
     private fb: FormBuilder,
     private http: HttpClient,
-    private location: Location
+    private location: Location,
+    private route: Router
   ) {
     this.service.studentProfile().subscribe((data: any) => {
       this.userdata = data;
@@ -66,17 +68,17 @@ export class StudentsProfileComponent implements OnInit {
   }
 
   newstudent = this.fb.group({
-    name: [, Validators.required],
-    mobile: [, Validators.required],
-    age: [, Validators.required],
-    Fathername: [, Validators.required],
-    mothername: [, Validators.required],
-    Email: [, Validators.required],
-    permentaddress: [, Validators.required],
-    collegename: [, Validators.required],
-    Adharnumber: [, Validators.required],
-    roomnumber: [, Validators.required],
-    regNo: [, Validators.required],
+    name: [, [Validators.required]],
+    mobile: [, [Validators.required]],
+    age: [, [Validators.required]],
+    Fathername: [,[ Validators.required]],
+    mothername: [, [Validators.required]],
+    Email: [, [Validators.required]],
+    permentaddress: [,[ Validators.required]],
+    collegename: [, [Validators.required]],
+    Adharnumber: [, [Validators.required]],
+    roomnumber: [, [Validators.required]],
+    regNo: [, [Validators.required]],
   });
 
   deleteData() {
@@ -89,13 +91,28 @@ export class StudentsProfileComponent implements OnInit {
       alert('sucessfully deleted');
       window.location.reload();
     });
-  }
-  // deteleRoomNo(){ this.Service.forEach((element:any)=>{ })}
+  }  empty(){
+    if(!this.allowAcces()){
+      this.route.navigate(['/login']);
+    }
+  } allowAcces():boolean{
+    if(sessionStorage.getItem('Adminlogin')== 'true'||sessionStorage.getItem('Adminlogin')!=null){
+      return true;
+    }
+    else{
+      return false;
+    }
+    }
 
-  ngOnInit() {}
+
+  ngOnInit() {
+    this.empty();
+  }
   studentinfo() {
+
     return this.service
       .addstudent(this.newstudent.value)
       .subscribe((data) => alert('sucessfully added'));
+
   }
 }

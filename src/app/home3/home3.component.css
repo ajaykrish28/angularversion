@@ -19,6 +19,7 @@
       width: 100%;
       margin-top: 5px ;
       margin-bottom: 450px;
+      position: relative;
   }
   .about-para{
       margin-top: 100px;
@@ -70,3 +71,44 @@
   .show-more .Dots{
       display: none;
   }
+  .container{
+    position: absolute;
+    top: 35%;
+    background-color: rgb(76, 76, 185);
+    width: 400px;
+    height: 300px;
+    left:35%;
+    color: white;
+    box-shadow: 1px 1px 10px black;
+    border-radius: 10px;
+  }
+  .container h1{
+    text-align: center;
+    margin-top: 60px;
+  }
+  .container h3{
+    text-align: center;
+    margin-top: 30px;
+    padding: 4px;
+  }
+  #close_show{
+  float: right;
+  margin-top: 5px;
+  margin-right: 20px;
+  }
+  .container button{
+    margin-left: 130px;
+    height: 40px;
+    width: 150px;
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin-top: 20px;
+    font-family:  sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgb(9, 8, 8);
+    border: none;
+    cursor: pointer;
+
+}

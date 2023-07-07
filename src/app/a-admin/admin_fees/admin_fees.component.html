@@ -1,23 +1,23 @@
 
 <app-SideBar></app-SideBar>
 <div class="home_content">
-  <div class="text"> Fees</div>
+  <div class="text"> Fees Details</div>
   <!-- manageDetails -->
   <div class="manageDetails">
     <div class="viewDetails">
-     <h1>view  paid status</h1>
+     <h1>View  paid status</h1>
      <i class='bx bx-user bx-md'></i>
-     <p>Here you can see fees Details of the student </p>
+     <p>Here you can see fees details of the students </p>
 
-     <button id="viewbtn" (click)="viewbtn()" >view </button>
+     <button id="viewbtn" (click)="viewbtn()" >View </button>
 
     </div>
     <div class="updates">
-        <h1>updates paid status</h1>
+        <h1>Updates paid status</h1>
         <i class='bx bx-cloud-upload bx-md' ></i>
-        <p>Here you can see the update fees datails </p>
+        <p>Here you can see the update fees  </p>
 
-        <button id="update_btn" (click)="update_btn()"  >updates </button>
+        <button id="update_btn" (click)="update_btn()"  >View</button>
     </div>
  </div>
  <!-- table_view -->
@@ -27,12 +27,12 @@
 
   <table id="table_view" >
     <tr>
-     <th>s.no</th>
+     <th>S.No</th>
      <th>Name</th>
      <th>Email id</th>
-     <th>Phone number</th>
+     <th>Phone Number</th>
 
-     <th>Register number</th>
+     <th>Register Number</th>
      <th>Room Number</th>
 
 
@@ -42,7 +42,7 @@
     <tr *ngFor="let filled of feesstatus">
       <td >{{ filled.id}} </td>
       <td>{{ filled.Name}}</td>
-      <td>{{ filled.email}}</td>
+      <td>{{ filled.Email}}</td>
       <td>{{ filled.phone}}</td>
       <td>{{ filled.register}}</td>
       <td>{{ filled.roomno}}</td>
@@ -59,11 +59,12 @@
 
    <!-- fees_container -->
   <div class="fees_container">
-     <div class="fees_container_head">  <h2>Fees</h2> </div>
+     <div class="fees_container_head">  <h2>Fees Details</h2> </div>
+     <br><br>
      <form [formGroup]="feesgrp" (submit)="feesform()">
       <div class="rightForm">
     <label for="">Name</label> <br>
-    <input type="text" name="" id="" formControlName="Name">
+    <input type="text" name="" id=""  placeholder="Name" formControlName="Name">
     <div *ngIf="feesgrp.controls['Name'].dirty" class="alert" pattern="^[a-zA-Z]+$">
       <p *ngIf="feesgrp.controls['Name'].errors?.['required']">User name should not be Empty</p>
       <p *ngIf="feesgrp.controls['Name'].errors?.['pattern']">Enter proper User Name</p>
@@ -71,42 +72,57 @@
     <br>
 
     <label for="">Email</label> <br>
-    <input type="text" name="" id=""  formControlName="email"> <br>
+
+
+    <input
+      type="text"
+      placeholder="Email"
+      formControlName="Email"
+      pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"
+    />
+    <div *ngIf="feesgrp.controls['Email'].dirty" class="alert">
+      <p *ngIf="feesgrp.controls['Email'].errors?.['required']">
+        Email should not be Empty
+      </p>
+      <p *ngIf="feesgrp.controls['Email'].errors?.['pattern']">
+        Enter a valid Email
+      </p>
+    </div> <br>
 
     <label for="">Phone No</label> <br>
-    <input type="number" name="" id=""  formControlName="phone" pattern="^[6-9]\d{9}$" >
+    <input type="number" name="" id="" placeholder="Phone Number"  formControlName="phone" pattern="^[6-9]\d{9}$" >
     <div *ngIf="feesgrp.controls['phone'].dirty" class="alert">
       <p *ngIf="feesgrp.controls['phone'].errors?.['required']">Mobile Number should not be Empty</p>
       <p *ngIf="feesgrp.controls['phone'].errors?.['pattern']">Enter a valid Mobile Number</p>
     </div><br>
   </div>
   <div class="lesftForm">
-    <label for="">Register no</label> <br>
-    <input type="number" name="" id=""  formControlName="register" pattern="^[0-9]\d{6}$" >
+    <label for="">Register No</label> <br>
+    <input type="number" name="" id=""  placeholder="Register Number" formControlName="register" pattern="^[0-9]\d{6}$" >
     <div *ngIf="feesgrp.controls['register'].dirty" class="alert">
       <p *ngIf="feesgrp.controls['register'].errors?.['required']">User name should not be Empty</p>
       <p *ngIf="feesgrp.controls['register'].errors?.['pattern']">Enter proper User Name</p>
     </div> <br>
 
-    <label for="">Room no</label> <br>
-    <input type="number" name="" id=""  formControlName="roomno" pattern="^[0-9]\d{2}$" >
-    <div *ngIf="feesgrp.controls['register'].dirty" class="alert">
-      <p *ngIf="feesgrp.controls['register'].errors?.['required']">User name should not be Empty</p>
-      <p *ngIf="feesgrp.controls['register'].errors?.['pattern']">Enter proper User Name</p>
+    <label for="">Room No</label> <br>
+    <input type="number" name="" id=""   placeholder="Room Number" formControlName="roomno" pattern="^[0-9]\d{2}$" >
+    <div *ngIf="feesgrp.controls['roomno'].dirty" class="alert">
+      <p *ngIf="feesgrp.controls['roomno'].errors?.['required']">User name should not be Empty</p>
+      <p *ngIf="feesgrp.controls['roomno'].errors?.['pattern']">Enter proper User Name</p>
     </div> <br>
 
     <div class="Fees status" >
 
     <label for="">Status</label> <br>
-      <select name="" type="text" id="" formControlName="feesStatus">
-      <option value=""disabled selected>status</option>
-      <option value="paid">paid</option>
-      <option value="unpaid">unpaid</option></select>
+      <select name="" type="text" id=""  placeholder="Status" formControlName="feesStatus">
+      <option value=""disabled selected>Status</option>
+      <option value="paid">Paid</option>
+      <option value="unpaid">Unpaid</option></select>
 
     </div>    </div>
 
           <div class="login-box">
-            <button >submit</button>
+            <button  [disabled]="feesgrp.invalid" >Submit</button>
           </div>
         </form>
 

@@ -28,47 +28,73 @@ import { MessTimeComponent } from './a-user/mess/mess-time/mess-time.component';
 import { LeaveHolidayComponent } from './a-user/leave/leave-holiday/leave-holiday.component';
 import { AdminDashComponent } from './a-admin/admin-dash/admin-dash.component';
 import { VacatingComponent } from './a-admin/vacating/vacating.component';
-
-
+import { ForgotComponent } from './forgot/forgot.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
-  { path: "", component: Home3Component },
-  { path: "Home", component: Home3Component },
-  { path: "about", component: AboutUsComponent},
-  { path: "contact", component: ContactUsComponent},
-  { path: "facilities", component: FacilitiesComponent},
-  { path: "login", component: LoginComponent},
-  { path: "contactus", component: ContactUsComponent},
+  { path: '', component: Home3Component },
+  { path: 'Home', component: Home3Component },
+  { path: 'about', component: AboutUsComponent },
+  { path: 'contact', component: ContactUsComponent },
+  { path: 'facilities', component: FacilitiesComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'contactus', component: ContactUsComponent },
 
-  {path:"registerform", component:AdminCredComponent},
+  { path: 'registerform', component: AdminCredComponent },
+
+  { path: 'forgot', component: ForgotComponent },
   // sidebar
 
-  { path: "logcred", component: AdminCredComponent },
-  { path: "Profile", component:StudentsProfileComponent},
-  { path: "Room", component: Admin_roomComponent},
-  { path: "Fees", component: Admin_feesComponent},
-  { path: "leaveform", component: Admin_leaveComponent},
-  { path: "Mess", component:AdminMessComponent},
-  { path: "admincret", component:AdminCredComponent},
-  { path: "vacate", component:VacatingComponent},
-
+  { path: 'logcred', component: AdminCredComponent },
+  {
+    path: 'Profile',
+    component: StudentsProfileComponent,
+  },
+  { path: 'Room', component: Admin_roomComponent },
+  { path: 'Fees', component: Admin_feesComponent },
+  {
+    path: 'leaveform',
+    component: Admin_leaveComponent,
+  },
+  { path: 'Mess', component: AdminMessComponent },
+  {
+    path: 'admincret',
+    component: AdminCredComponent,
+  },
+  { path: 'vacate', component: VacatingComponent },
+  { path: 'logout', component: Home3Component },
+  // logout
   //-user
-  { path: "logcred", component: AdminCredComponent },
-  { path: "Profile-user", component:ProfileComponent},
-  { path: "Room-user", component: RoomComponent},
- { path: "Fees-user", component:FeesComponent },
-  { path: "leaveform-user", component:LeaveComponent},
-  { path: "Mess-user", component:MessComponent},
+  { path: 'logcred', component: AdminCredComponent },
+  {
+    path: 'Profile-user',
+    component: ProfileComponent,
+  },
+  { path: 'Room-user', component: RoomComponent },
+  { path: 'Fees-user', component: FeesComponent },
+  {
+    path: 'leaveform-user',
+    component: LeaveComponent,
+  },
+  { path: 'Mess-user', component: MessComponent },
 
   //button My-room
-  { path: "My-room", component:MyroomComponent},
-  { path: "leave-Check", component:LeaveDetailsComponent},
-  { path: "Mess-menu", component:MessMenuComponent},
-  { path: "mess-time", component:MessTimeComponent},
-  { path: "exchange-room", component:RoomExchangeComponent},
-  { path: "holiday", component:LeaveHolidayComponent},
-  { path: "dash", component:AdminDashComponent},
-
+  { path: 'My-room', component: MyroomComponent },
+  {
+    path: 'leave-Check',
+    component: LeaveDetailsComponent,
+  },
+  { path: 'Mess-menu', component: MessMenuComponent },
+  { path: 'mess-time', component: MessTimeComponent },
+  {
+    path: 'exchange-room',
+    component: RoomExchangeComponent,
+  },
+  {
+    path: 'holiday',
+    component: LeaveHolidayComponent,
+  },
+  { path: 'dash', component: AdminDashComponent },
 ];
 
 @NgModule({

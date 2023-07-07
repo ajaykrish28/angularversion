@@ -8,12 +8,7 @@
   </div>
   <ul class="nav_list">
 
-    <li>
-      <a class="on_dash" routerLink="/Dashboard-user" routerLinkActive="activebtn">
-        <i class="bx bx-grid-alt"></i>
-        <span class="links_name"> Dashboard </span>
-      </a>
-    </li>
+
     <li>
       <a routerLink="/Profile-user" routerLinkActive="activebtn">
         <i class="bx bx-user"></i>
@@ -46,9 +41,9 @@
       </a>
     </li>
     <li>
-      <a routerLink="/log out" routerLinkActive="activebtn">
-        <i class="bx bx-log-out-circle"></i>
-        <span class="links_name">log out</span>
+      <a >
+        <i class="bx bx-log-out-circle" (click)="logout()"></i>
+        <span class="links_name" >Logout</span>
       </a>
     </li>
   </ul>

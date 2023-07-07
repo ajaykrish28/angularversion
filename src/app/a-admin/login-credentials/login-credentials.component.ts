@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { confirmPasswordValidate } from './confirmPasswordValidate';
 import { RegserviceServiceService } from './RegserviceService.service';
-
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-credentials',
@@ -12,7 +12,7 @@ import { RegserviceServiceService } from './RegserviceService.service';
 export class LoginCredentialsComponent implements OnInit {
 
 
-  constructor(private fb:FormBuilder,private user:RegserviceServiceService) { }
+  constructor(private fb:FormBuilder,private user:RegserviceServiceService,private route: Router) { }
   regform=this.fb.group({
     namevalue:[,Validators .required],
     emailvalue:[,Validators .required],
@@ -43,7 +43,21 @@ this.user.addReginfo(body).subscribe(data=>{
 alert("form submit");
 })
   }
+  empty(){
+    if(!this.allowAcces()){
+      this.route.navigate(['/login']);
+    }
+  } allowAcces():boolean{
+    if(sessionStorage.getItem('Adminlogin')== 'true'||sessionStorage.getItem('Adminlogin')!=null){
+      return true;
+    }
+    else{
+      return false;
+    }
+    }
 
   ngOnInit() {
+    this.empty();
+
   }
 }

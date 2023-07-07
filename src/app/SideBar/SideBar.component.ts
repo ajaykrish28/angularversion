@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-
+import { Route, Router } from '@angular/router';
 @Component({
   selector: 'app-SideBar',
   templateUrl: './SideBar.component.html',
@@ -8,7 +8,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class SideBarComponent implements OnInit {
 
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   openSideBar(){
     let  home_content:any="";
@@ -20,10 +20,18 @@ export class SideBarComponent implements OnInit {
 
 
   }
+  success:any=true;
+  failure:any=false;
+  logout(){
+    sessionStorage.setItem('Adminlogin', this.failure);
+    this.route.navigate(['/login']);
+
+  }
 
 
 
   ngOnInit() {
+
   }
 
 }

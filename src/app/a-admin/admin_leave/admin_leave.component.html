@@ -1,22 +1,22 @@
 <app-SideBar></app-SideBar>
 <div class="home_content">
-  <div class="text"> <p>Attendance</p></div>
+  <div class="text"> Attendance Details</div>
   <!-- manageDetails -->
   <div class="manageDetails">
     <div class="viewDetails">
-     <h1>view  Attendance list</h1>
+     <h1>View  Attendance List</h1>
      <i class='bx bx-user bx-md'></i>
-     <p>Here you can see Attendance Details of the student </p>
+     <p>Here you can see attendance details of the students </p>
 
-     <button id="viewbtn" (click)="viewbtn()" >view </button>
+     <button id="viewbtn" (click)="viewbtn()" >View </button>
 
     </div>
     <div class="updates">
-        <h1>updates Attendance list</h1>
+        <h1>Updates Attendance List</h1>
         <i class='bx bx-cloud-upload bx-md' ></i>
-        <p>Here you can see the update Attendance datails </p>
+        <p>Here you can see the update attendance details </p>
 
-        <button id="update_btn" (click)="update_btn()"  >updates </button>
+        <button id="update_btn" (click)="update_btn()"  >Updates </button>
     </div>
  </div>
  <!-- table_view -->
@@ -26,24 +26,24 @@
 
   <table id="table_view" >
     <tr>
-     <th>s.no</th>
+     <th>S.No</th>
      <th>Name</th>
-     <th>Email id</th>
-     <th>Phone number</th>
 
-     <th>Register number</th>
+     <th>Phone Number</th>
+
+
      <th>Room Number</th>
 
 
-     <th>staus</th>
+     <th>Status</th>
     </tr>
     <!-- data 1 -->
-    <tr *ngFor="let filled of feesstatus">
-      <td >{{ filled.id}} </td>
+    <tr *ngFor="let filled of feesstatus , index as i">
+      <td >{{ i+1}} </td>
       <td>{{ filled.Name}}</td>
-      <td>{{ filled.email}}</td>
+
       <td>{{ filled.phone}}</td>
-      <td>{{ filled.register}}</td>
+
       <td>{{ filled.roomno}}</td>
       <td>{{ filled.status}}</td>
 
@@ -57,23 +57,49 @@
 
 
    <!-- fees_container -->
-  <div class="fees_container">
-     <div class="fees_container_head">  <h2>Fees</h2> </div>
+  <div class="fees_container" >
+     <div class="fees_container_head">  <h2>Attendance</h2> </div>
+     <br><br>
      <form [formGroup]="feesgrp" (submit)="attendance()">
       <div class="rightForm">
     <label for="">Name</label> <br>
-    <input type="text" name="" id="" formControlName="Name"> <br>
+    <input type="text" name="" id=""  placeholder="Name" formControlName="Name">
+    <div *ngIf="feesgrp.controls['Name'].dirty" class="alert">
+      <p *ngIf="feesgrp.controls['Name'].errors?.['required']">
+        User Name should not be empty
+      </p>
+      <p *ngIf="feesgrp.controls['Name'].errors?.['pattern']">
+        Enter proper user name
+      </p>
+    </div><br>
 
 
 
-    <label for="">Phone No</label> <br>
-    <input type="text" name="" id=""  formControlName="phone">  <br>
+    <label for="">Phone Number</label> <br>
+    <input
+            type="text"
+            placeholder="Mobile Number"
+            formControlName="mobile"
+            pattern="^[6-9]\d{9}$"
+          />
+          <div *ngIf="feesgrp.controls['mobile'].dirty" class="alert">
+            <p *ngIf="feesgrp.controls['mobile'].errors?.['required']">
+              Mobile Number should not be empty
+            </p>
+            <p *ngIf="feesgrp.controls['mobile'].errors?.['pattern']">
+              Enter a valid mobile number
+            </p>
+          </div>  <br>
   </div>
   <div class="lesftForm">
 
 
     <label for="">Room no</label> <br>
-    <input type="text" name="" id=""  formControlName="roomno"> <br>
+    <input type="text" name="" id=""   placeholder="Room Number" formControlName="roomno">
+    <div *ngIf="feesgrp.controls['roomno'].dirty" class="alert">
+      <p *ngIf="feesgrp.controls['roomno'].errors?.['required']">
+        Room Number should not be empty
+      </p></div> <br>
 
     <div class="Fees status" >
 
@@ -81,12 +107,14 @@
       <select name="" type="text" id="" formControlName="status">
       <option value=""disabled selected>status</option>
       <option value="present">present</option>
-      <option value="Absent">Absent</option></select>
+      <option value="Absent">Absent</option>
+      <option value="Absent">Late</option>
+    </select>
 
     </div>    </div>
 
           <div class="login-box">
-            <button >submit</button>
+            <button  [disabled]="feesgrp.invalid" >Submit</button>
           </div>
         </form>
 
