@@ -83,7 +83,5 @@ export class AdminMessComponent implements OnInit {
   }
 
   ngOnInit() {
-
-    // this.empty();
   }
 }

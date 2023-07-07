@@ -91,22 +91,6 @@ export class StudentsProfileComponent implements OnInit {
       alert('sucessfully deleted');
       window.location.reload();
     });
-  }  empty(){
-    if(!this.allowAcces()){
-      this.route.navigate(['/login']);
-    }
-  } allowAcces():boolean{
-    if(sessionStorage.getItem('Adminlogin')== 'true'||sessionStorage.getItem('Adminlogin')!=null){
-      return true;
-    }
-    else{
-      return false;
-    }
-    }
-
-
-  ngOnInit() {
-    // this.empty();
   }
   studentinfo() {
 

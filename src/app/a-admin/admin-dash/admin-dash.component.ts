@@ -23,7 +23,6 @@ export class AdminDashComponent implements OnInit {
     }
   }
   ngOnInit() {
-    // this.empty();
   }
 
 }

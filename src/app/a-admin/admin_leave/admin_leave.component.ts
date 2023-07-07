@@ -70,7 +70,6 @@ export class Admin_leaveComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.empty();
   }
 
 }

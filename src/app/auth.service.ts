@@ -51,12 +51,14 @@ isUserLoggedIn:boolean = true;
     return of(this.isAdminLoggedIn);
   }
 
-  isAdminLogin():boolean {
-    return this.isAdminLoggedIn;
-  }
-
-  logoutAdmin():any {
-    this.isAdminLoggedIn = true;
-  }
+isLoggedIn=false;
+login(){
+ this.isLoggedIn=true;
+ this.isUserLogIn= Boolean(sessionStorage.getItem("userSuccess"));
+}
+logout(){
+  this.isLoggedIn=false;
+  this.isUserLogIn= Boolean(sessionStorage.getItem("userSuccess"));
+ }
 
 }

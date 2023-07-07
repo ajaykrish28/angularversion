@@ -57,7 +57,5 @@ alert("form submit");
     }
 
   ngOnInit() {
-    // this.empty();
-
   }
 }

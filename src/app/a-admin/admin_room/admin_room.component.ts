@@ -109,20 +109,6 @@ return this.service.addroom(this.addRoom.value).subscribe(data=>{
   messInfoData:any;
 
   ngOnInit() {
-
-    this.service.getRoomQy().subscribe((data: any) => {
-      this.messInfoData = data;
-    });
-    this.service. getaddroom().subscribe((data: any)=>{
-      this.userdata=data;
-    }
-
-    )
-    this.service. getroomInfo().subscribe((data:any)=>
-    {
-      this.roomdata=data;
-    })
-    // this.empty();
   }
 
   }

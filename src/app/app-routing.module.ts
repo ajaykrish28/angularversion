@@ -45,64 +45,32 @@ const routes: Routes = [
   { path: 'forgot', component: ForgotComponent },
   // sidebar
 
-  { path: 'logcred', component: AdminCredComponent, canActivate: [AuthGuard] },
-  {
-    path: 'Profile',
-    component: StudentsProfileComponent,
-    canActivate: [AuthGuard],
-  },
-  { path: 'Room', component: Admin_roomComponent, canActivate: [AuthGuard] },
-  { path: 'Fees', component: Admin_feesComponent, canActivate: [AuthGuard] },
-  {
-    path: 'leaveform',
-    component: Admin_leaveComponent,
-    canActivate: [AuthGuard],
-  },
-  { path: 'Mess', component: AdminMessComponent, canActivate: [AuthGuard] },
-  {
-    path: 'admincret',
-    component: AdminCredComponent,
-    canActivate: [AuthGuard],
-  },
-  { path: 'vacate', component: VacatingComponent, canActivate: [AuthGuard] },
-  { path: 'logout', component: Home3Component, canActivate: [AuthGuard] },
-  // logout
+  { path: "logcred", component: AdminCredComponent },
+  { path: "Profile", component:StudentsProfileComponent},
+  { path: "Room", component: Admin_roomComponent},
+  { path: "Fees", component: Admin_feesComponent},
+  { path: "leaveform", component: Admin_leaveComponent},
+  { path: "Mess", component:AdminMessComponent},
+  { path: "admincret", component:AdminCredComponent},
+  { path: "vacate", component:VacatingComponent},
+
   //-user
-  { path: 'logcred', component: AdminCredComponent, canActivate: [AuthGuard] },
-  {
-    path: 'Profile-user',
-    component: ProfileComponent,
-    canActivate: [AuthGuard],
-  },
-  { path: 'Room-user', component: RoomComponent, canActivate: [AuthGuard] },
-  { path: 'Fees-user', component: FeesComponent, canActivate: [AuthGuard] },
-  {
-    path: 'leaveform-user',
-    component: LeaveComponent,
-    canActivate: [AuthGuard],
-  },
-  { path: 'Mess-user', component: MessComponent, canActivate: [AuthGuard] },
+  { path: "logcred", component: AdminCredComponent },
+  { path: "Profile-user", component:ProfileComponent},
+  { path: "Room-user", component: RoomComponent},
+ { path: "Fees-user", component:FeesComponent },
+  { path: "leaveform-user", component:LeaveComponent},
+  { path: "Mess-user", component:MessComponent},
 
   //button My-room
-  { path: 'My-room', component: MyroomComponent, canActivate: [AuthGuard] },
-  {
-    path: 'leave-Check',
-    component: LeaveDetailsComponent,
-    canActivate: [AuthGuard],
-  },
-  { path: 'Mess-menu', component: MessMenuComponent, canActivate: [AuthGuard] },
-  { path: 'mess-time', component: MessTimeComponent, canActivate: [AuthGuard] },
-  {
-    path: 'exchange-room',
-    component: RoomExchangeComponent,
-    canActivate: [AuthGuard],
-  },
-  {
-    path: 'holiday',
-    component: LeaveHolidayComponent,
-    canActivate: [AuthGuard],
-  },
-  { path: 'dash', component: AdminDashComponent, canActivate: [AuthGuard] },
+  { path: "My-room", component:MyroomComponent},
+  { path: "leave-Check", component:LeaveDetailsComponent},
+  { path: "Mess-menu", component:MessMenuComponent},
+  { path: "mess-time", component:MessTimeComponent},
+  { path: "exchange-room", component:RoomExchangeComponent},
+  { path: "holiday", component:LeaveHolidayComponent},
+  { path: "dash", component:AdminDashComponent},
+
 ];
 
 @NgModule({

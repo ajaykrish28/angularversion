@@ -25,8 +25,8 @@
 
       <a routerLink="/contactus" routerLinkActive="activebtn"> <i class="fa fa-envelope" aria-hidden="true"></i> Contact us</a>
 
-      <a routerLink="/login"  *ngIf="!usersuccess" routerLinkActive="activebtn"  > <i class="fa fa-sign-in" aria-hidden="true"></i> Login</a>
-      <a  (click)="authService.logoutAdmin()" *ngIf="usersuccess"   > <i class="fa fa-sign-in" aria-hidden="true"></i>Logout</a>
+      <a routerLink="/login" (click)="authService.login()" *ngIf="!usersuccess" routerLinkActive="activebtn"  > <i class="fa fa-sign-in" aria-hidden="true"></i> log-in</a>
+      <a  (click)="authService.logout()" *ngIf="usersuccess"   > <i class="fa fa-sign-in" aria-hidden="true"></i> log-out</a>
   </div>
 </div>
 

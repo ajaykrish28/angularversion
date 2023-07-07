@@ -50,13 +50,9 @@ success:any=true;
 
       if (user) {
         alert('login sucessful');
+        this.LoginForm.reset();
+        this.route.navigate(['/Profile-user']);
 
-        // sessionStorage.setItem('login',this.success);
-        // this.LoginForm.reset();
-        // this.route.navigate(['/Profile-user']);
-this.authService.userLogin(this.LoginForm.value.emailvalue,this.LoginForm.value.passwordvalue ).subscribe((data)=>{
-  this.route.navigate(['/Profile-user']);
-})
       }
       this.error = false;
     });
@@ -71,15 +67,8 @@ this.authService.userLogin(this.LoginForm.value.emailvalue,this.LoginForm.value.
 
       if (user) {
         alert('login sucessful');
-        // sessionStorage.setItem('Adminlogin',this.success);
-        // this.LoginForm.reset();
-        // this.route.navigate(['/Room']);
-        this.authService.userLogin(this.LoginForm.value.emailvalue,this.LoginForm.value.passwordvalue ).subscribe((data)=>{
-          this.route.navigate(['/Room']);
-        })
-
-
-
+        this.LoginForm.reset();
+        this.route.navigate(['/Room']);
       } else {
         this.error = true;
       }

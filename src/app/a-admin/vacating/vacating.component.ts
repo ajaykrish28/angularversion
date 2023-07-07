@@ -84,18 +84,5 @@ export class VacatingComponent implements OnInit {
   vacate: any;
 
   ngOnInit() {
-    this.http.vacateRoomUser().subscribe((data: any) => {
-      this.feesstatus = data;
-      console.log(this.feesstatus);
-    }),
-      this.http.getVactedUser().subscribe((data: any) => {
-        this.vacate = data;
-      });
-      // this.empty();
-  }
-  empty(){
-    if(!this.allowAcces()){
-      this.route.navigate(['/login']);
-    }
   }
 }
