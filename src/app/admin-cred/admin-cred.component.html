@@ -1,7 +1,7 @@
 
 <app-SideBar></app-SideBar>
 <div class="home_content">
-  <div class="text"> <p>login-credentials</p></div>
+  <div class="text"> <p>Login-Credentials</p></div>
   <div class="login-form">
     <h1>Register</h1>
     <form [formGroup]="regform"  (submit)="regSubmit()">
@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="mobile">
-        <input type="number" placeholder="Mobil-number"  formControlName="mobilevalue" pattern="^[6-9]\d{9}$">
+        <input type="number" placeholder="Mobil Number"  formControlName="mobilevalue" pattern="^[6-9]\d{9}$">
         <div *ngIf="regform.controls['mobilevalue'].dirty" class="alert">
           <p *ngIf="regform.controls['mobilevalue'].errors?.['required']">Mobile Number should not be Empty</p>
           <p *ngIf="regform.controls['mobilevalue'].errors?.['pattern']">Enter a valid Mobile Number</p>
@@ -34,7 +34,7 @@
         </div>
       </div>
       <div class="confirm-password">
-        <input type="password" placeholder="confirm password"   #confirmpassword formControlName="confirmpasswordvalue">
+        <input type="password" placeholder="Confirm Password"   #confirmpassword formControlName="confirmpasswordvalue">
         <div *ngIf="regform.controls['confirmpasswordvalue'].invalid&&regform.controls['confirmpasswordvalue'].dirty" class="alert">
           <p  *ngIf="regform.controls['confirmpasswordvalue'].errors?.['required']">Confirm PW should not be Empty</p>
           <p  *ngIf="regform.controls['confirmpasswordvalue'].errors?.['confirmPasswordValidate']">Confirm Password Doesn't Match Password</p>

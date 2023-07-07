@@ -39,3 +39,20 @@
   background-color: #0420aa;
   color: white;
 }
+.instruction {
+  margin-top: 35px;
+ margin-left: 10px;
+}
+.instruction li{
+  margin-left: 30px;
+  margin: 10px;
+
+}
+.instruction li p{
+font-size: larger;
+
+
+}
+#table_view{
+  margin-top: 40px;
+}

@@ -10,8 +10,6 @@
   transition: all 0.5s ease;
 }
 
-
-
 .home_content .text {
   font-size: 25px;
   font-weight: 600;
@@ -23,110 +21,104 @@
   margin-bottom: 15px;
 }
 /* .fees_container */
-.fees_container{
-  background:  aliceblue;
-
- margin-top: 5%;
- margin-right: 5%;
- margin-left: 5%;
- display: none;
- margin-bottom: 5%;
-
-
+.fees_container {
+  border-bottom: 15px solid blue;
+  border-radius: 10px;
+  margin-top: 5%;
+  margin-right: 5%;
+  margin-left: 5%;
+  display: none;
+  margin-bottom: 5%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
-.fees_container_head  {
-
-
-
-  color:rgb(19, 18, 18);
+.fees_container_head {
+  border-radius: 10px;
+  padding: 2px;
+  text-align: center;
+  color: rgb(19, 18, 18);
 }
 
-.manageDetails{
-display: grid;
-grid-template-columns: 1fr 1fr;
+.manageDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 /* .viewDetails */
 
-.viewDetails{
-height: 250px;
-width: 500px;
-border: 2px solid rgb(247, 247, 248);
-margin: 5px;
-margin-left: 10%;
-border-radius: 5px;
+.viewDetails {
+  height: 250px;
+  width: 500px;
+  border: 2px solid rgb(247, 247, 248);
+  margin: 5px;
+  margin-left: 10%;
+  border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   border-radius: 5%;
 }
 
-.viewDetails h1{
-text-align: center;
-margin: 5%;
+.viewDetails h1 {
+  text-align: center;
+  margin: 5%;
 }
-.viewDetails p{
+.viewDetails p {
   text-align: center;
 }
 /* .updates */
-.updates{
-height: 250px;
-width:  500px;
-border: 2px solid rgb(255, 255, 255);
-margin: 5px;
-margin-left: 10%;
-border-radius: 5px;
+.updates {
+  height: 250px;
+  width: 500px;
+  border: 2px solid rgb(255, 255, 255);
+  margin: 5px;
+  margin-left: 10%;
+  border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   border-radius: 5%;
-
 }
-.updates h1{
-text-align: center;
-margin: 5%;
-}
-.updates p{
+.updates h1 {
   text-align: center;
+  margin: 5%;
+}
+.updates p {
+  text-align: center;
+}
+.manageDetails button {
+  padding: 5px;
+  background: blue;
+  color: white;
+  text-align: center;
+  margin-left: 40%;
+  padding: 2%;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+.show_update {
+  display: block;
+}
+.table_view {
+  display: none;
+}
+.show_view {
+  display: block;
+}
 
-  }
-.manageDetails button{
-padding: 5px;
-background: blue;
-color: white;
-text-align: center;
-margin-left: 40%;
-padding: 2%;
-cursor: pointer;
-border: none;
-border-radius: 5px;
+table {
+  border-collapse: collapse;
+  width: 70%;
 }
-.show_update{
-display: block;
+th,
+td {
+  border: 2px solid rgb(255, 255, 255);
+  padding: 15px;
 }
-.table_view{
-display: none;
-}
-.show_view{
-display: block;
-}
-
-table{
-
-border-collapse:collapse ;
-width: 70%;
-}
-th,td{
-border: 2px solid rgb(255, 255, 255);
-padding: 15px;
-}
-.table_view{
- 
+.table_view {
   margin-top: 5%;
 }
 
-
- i{
+i {
   text-align: center;
   margin-left: 40%;
   padding: 2%;
 }
-
 
 /* .viewDetails:hover{
   background-color: blue;
@@ -138,48 +130,44 @@ padding: 15px;
   color: rgb(32, 30, 30);
 } */
 
-form{
+form {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-select
-{
+select {
   padding: 10px;
   margin: 10px;
   width: 80%;
 }
-.fees_container button{
-  color: rgb(40, 35, 35);
-padding: 2%;
+.fees_container button {
+  background-color: blue;
+  position: relative;
+  color: white;
+  padding: 2%;
   margin: 3%;
-  margin-left: 70%;
+  left: 85%;
   border: none;
   cursor: pointer;
-
-
 }
 
-.fees_container label{
+.fees_container label {
   padding: 10px;
   margin: 10px;
   margin-top: 10px;
 }
-.fees_container input{
+.fees_container input {
   padding: 10px;
   margin: 10px;
   width: 80%;
 }
-p
-{
+p {
   font-size: 20px;
-
 }
-.fees_container_head{
+.fees_container_head {
   background-color: blue;
 }
-.fees_container_head h2
-{
+.fees_container_head h2 {
   margin: 10px;
 
   color: white;
@@ -191,14 +179,19 @@ p
   width: 100%;
 }
 
-#table_view td, #table_view th {
+#table_view td,
+#table_view th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#table_view tr:nth-child(even){background-color: #f2f2f2;}
+#table_view tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
 
-#table_view tr:hover {background-color: #ddd;}
+#table_view tr:hover {
+  background-color: #ddd;
+}
 
 #table_view th {
   padding-top: 12px;
@@ -206,4 +199,7 @@ p
   text-align: left;
   background-color: #0420aa;
   color: white;
+}
+form {
+  margin-left: 80px;
 }

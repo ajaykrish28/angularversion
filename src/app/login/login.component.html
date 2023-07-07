@@ -6,8 +6,8 @@
 
           <div class="content">
               <div class="text">
-                  <h1>AKS <br> HOSTELS</h1>
-                  <P>WELCOMING YOU TO LOGIN</P>
+                  <h1>AKS <br> HOSTEL</h1>
+                  <P>WELCOME TO LOGIN PAGE</P>
                   <img src="../../assets/login.png" alt="">
               </div>
           </div>
@@ -28,10 +28,10 @@
                     <p *ngIf="LoginForm.controls['passwordvalue'].errors?.['pattern']" >Password Must Contain 1Caps(A)-Num(1)-Symbol(@)</p>
                   </div>
                   <br>
-                  <a href="#" id="forget">Forgot Password?</a>
+                  <a routerLink="/forgot"  routerLinkActive="activebtn" id="forget">Forgot Password?</a>
 
                   <button type="submit" id="submit">submit</button><br><br>
-
+                  <!-- forgot -->
 
               </form>
           </div>

@@ -40,12 +40,13 @@ import { LeaveHolidayComponent } from './a-user/leave/leave-holiday/leave-holida
 import { LeaveDetailsComponent } from './a-user/leave/leave-details/leave-details.component';
 import { ProfileComponent } from './a-user/profile/profile.component';
 import { VacatingComponent } from './a-admin/vacating/vacating.component';
+import { ForgotComponent } from './forgot/forgot.component';
 
 
 
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     LoginComponent,
       HomeComponent,
@@ -79,9 +80,8 @@ import { VacatingComponent } from './a-admin/vacating/vacating.component';
       LeaveHolidayComponent,
       LeaveDetailsComponent,
       ProfileComponent,
-      VacatingComponent
-
-
+      VacatingComponent,
+      ForgotComponent
    ],
   imports: [
     BrowserModule,

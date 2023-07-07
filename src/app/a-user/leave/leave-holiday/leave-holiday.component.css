@@ -19,7 +19,7 @@
 {
   margin: 10px;
   width: 400px;
-  border:2px solid blue ;
+
   display: grid;
   grid-template-rows: 1fr 1fr;
 }
@@ -28,30 +28,44 @@
   height: 600px;
   margin-left: 30px;
 }
-.head
-{
-  border:2px solid blue ;
-}
-.head h2{
-text-align: center;
-
-}
-.body p{
- margin: 5px;
-
-}
-.bottom p{
-padding: 5px;
-  border:2px solid blue ;
 
 
-}
+
 .container{
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-.Rcontainer{
+.Rightcontainer{
+box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+border-radius: 10px;
+}
+.head
+{
+border-top:5px solid rgb(77, 77, 251);
+}
+.head h2{
+text-align: center;
+color:blue;
 
+margin-top: 5px;
+}
+
+.body p{
+ margin-left: 65px;
+margin-top: -10px;
+font-size: larger;
+
+}
+.bottom{
+  background-color: rgb(77, 77, 251);
+  border-radius: 10px;
+  color:white;
+}
+.bottom p{
+
+margin-top: 10px;
+font-size: larger;
+margin-left: 65px;
 }
 

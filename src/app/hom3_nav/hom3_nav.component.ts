@@ -22,12 +22,12 @@ usersuccess=false;
  }
 
  constructor(private fb:FormBuilder,public authService:AuthService) {
-  this.usersuccess=Boolean(sessionStorage.getItem("usersuccess"))||this.authService.userlogin
+  // this.usersuccess=Boolean(sessionStorage.getItem("usersuccess"))||this.authService.userlogin
   }
   logout(){
-    this.authService.userlogin=false;
-    this.usersuccess=false;
-    sessionStorage.clear();
+    // this.authService.userlogin=false;
+    // this.usersuccess=false;
+    // sessionStorage.clear();
   }
  LoginForm=this.fb.group({
    namevalue:[,Validators .required],

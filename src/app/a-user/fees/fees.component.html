@@ -1,79 +1,114 @@
 <app-user-sidebar></app-user-sidebar>
 <div class="home_content">
-  <div class="text">fees</div>
+  <div class="text">Fees</div>
   <div class="fees">
-      <div class="profile-user">
-          <div class="left"><p><span>Reg no:</span> 1915003</p>
-              <p><span>Name:</span> Arunkumar</p>
-
-          </div>
-          <div class="right">
-              <p><span>Fees:</span>Hostel Fees</p>
-              <p><span>Duration:</span>Monthly</p>
-              <button id="serach">Search</button>
-          </div>
+    <div class="profile-user">
+      <div class="left">
+        <p><span>Reg No:</span> {{ Register }}</p>
+        <p><span>Name:</span> {{ Name }}</p>
       </div>
+      <div class="right">
+        <p><span>Fees:</span>Hostel Fees</p>
+        <p><span>Duration:</span>Monthly</p>
+      </div>
+    </div>
     <div class="totalfees">
-      <h2>Total Hostel fees <span>Mr Arun</span> </h2>
-      <h3>Rs 55,000</h3>
-  <button id="menu_show" (click)="menu_show()">pay</button>
-
+      <h2>
+        Total hostel fees for<span> {{ Name }}</span>
+      </h2>
+      <h3>Rs: 5,500</h3>
+      <button id="menu_show" (click)="menu_show()">Pay</button>
     </div>
     <div class="pending">
-      <h2> Hostel fees status <span>Mr Arun</span> </h2>
-      <h3>paid</h3>
-
+      <h2>
+        Hostel fees status for <span> {{ Name }}</span>
+      </h2>
+      <h3>{{ status }}</h3>
     </div>
   </div>
   <dialog class="modal" id="modal">
     <div class="dialoge-grid">
-    <div class="left">
-  <img  class="payment-img" src="../../../assets/payment.png"alt="">
-    </div>
-
-     <div class="right">
-
-    <div class="selction">	&nbsp;
-      <div class="top-payment"> <h2>payment method  </h2><i class="fa fa-times fa-2x" aria-hidden="true" id="close_show" (click)="close_show()"></i></div>
-        <div class="grid-paymentOption">
-        <div><i class='bx bxs-credit-card-alt' ></i><br>
-            <input type="radio">
-        <label for="">credit card</label></div>
-
-     <div>
-     <i class='bx bxl-paypal' ></i><br>
-     <input type="radio">
-        <label for="">paypal</label>
+      <div class="left">
+        <img class="payment-img" src="../../../assets/payment.png" alt="" />
       </div>
-      <div>
-      <i class='bx bxs-credit-card-alt' ></i><br>
-      <input type="radio">
-        <label for="">debit card</label>
+      <form [formGroup]="cardDetailsForm" (submit)="cardDetails()">
+      <div class="right">
+        <div class="selction">
+          &nbsp;
+          <div class="top-payment">
+            <h2>Payment Method</h2>
+            <i
+              class="fa fa-times fa-2x"
+              aria-hidden="true"
+              id="close_show"
+              (click)="close_show()"
+            ></i>
+          </div>
 
-      </div></div>
+          <div class="grid-paymentOption">
+            <div>
+              <i class="bx bxs-credit-card-alt fa-2x"></i><br />
+              <input type="radio" name="Payment"  />
+              <label for="">Credit card</label>
+            </div>
+
+            <div>
+              <i class="bx bxl-paypal fa-2x"></i><br />
+              <input type="radio"  name="Payment"/>
+              <label for="">Paypal</label>
+            </div>
+            <div>
+              <i class="bx bxs-credit-card-alt fa-2x"></i><br />
+              <input type="radio" name="Payment" />
+              <label for="">Debit card</label>
+            </div>
+          </div>
+        </div>
+        <div class="paymethod">
+          <p>
+            <label for="">Cardholder Name</label><br />
+            <input type="text"    formControlName="CardName" />
+          </p>
+          <div *ngIf="cardDetailsForm.controls['CardName'].dirty" class="alert">
+            <p *ngIf="cardDetailsForm.controls['CardName'].errors?.['required']">
+            Card Name should not be empty
+            </p>
+
+          </div> <br>
+          <p>
+            <label for="">Card Number</label><br />
+            <input type="text"   formControlName="CardNo" />
+          </p>
+          <div *ngIf="cardDetailsForm.controls['CardNo'].dirty" class="alert">
+            <p *ngIf="cardDetailsForm.controls['CardNo'].errors?.['required']">
+          Card number should not be empty
+            </p>
+
+          </div><br>
+          <p>
+            <label for=""> Card Valid</label><br />
+            <input type="text"    formControlName="CardValid"/>
+          </p>
+          <div *ngIf="cardDetailsForm.controls['CardValid'].dirty" class="alert">
+            <p *ngIf="cardDetailsForm.controls['CardValid'].errors?.['required']">
+          Card valid should not be empty
+            </p>
+
+          </div> <br>
+          <p>
+            <label for="">CVV/CVC</label><br />
+            <input type="text"   formControlName="Cvv" />
+          </p>
+          <div *ngIf="cardDetailsForm.controls['Cvv'].dirty" class="alert">
+            <p *ngIf="cardDetailsForm.controls['Cvv'].errors?.['required']">
+              CVV/CVC should not be empty
+            </p>
+
+          </div><br>
+
+          <button type="submit"  [disabled]="cardDetailsForm.invalid">Pay Now</button>
+        </div>
+      </div></form>
     </div>
-    <div class="paymethod">
-
-    <p>
-        <label for="">cardholder's Name</label><br>
-        <input type="text">
-    </p>
-   <p>
-    <label for="">card Number</label><br>
-    <input type="text">
-   </p>
-   <p>
-    <label for=""> card valid</label><br>
-    <input type="text">
-   </p>
-   <p>
-    <label for="">cvv/cvc</label><br>
-    <input type="text">
-   </p>
-
-
-    <button type="submit"> paynow</button></div></div></div>
-
-</dialog>
-
+  </dialog>
 </div>

@@ -1,29 +1,29 @@
 <app-user-sidebar></app-user-sidebar>
 <div class="home_content">
-  <div class="text">Mess</div>
+  <div class="text">Mess Details</div>
   <div class="room-detail">
 
       <div class="top1 new-room">
           <h1>Mess Menu</h1>
-          <p> you can see the your menu details</p>
+          <p> you can see  your menu details</p>
           <i class="fa fa-user fa-3x" aria-hidden="true"></i><br>
-          <a routerLink="/Mess-menu"><button type="submit" id="detail_btn">My room</button></a>
+          <a routerLink="/Mess-menu"><button type="submit" id="detail_btn">View</button></a>
           <router-outlet></router-outlet>
 
       </div>
       <div class="top1 your-room">
-          <h1>Mess Timming</h1>
-          <p>  you can see the your mess Timming</p>
+          <h1>Mess Timing</h1>
+          <p>  you can see your mess Timing</p>
           <i class="fa fa-search fa-3x" aria-hidden="true"></i><br>
 
-          <a routerLink="/mess-time"><button type="submit" id="detail_btn">My room</button></a>
+          <a routerLink="/mess-time"><button type="submit" id="detail_btn">View</button></a>
           <router-outlet></router-outlet>
       </div>
   </div>
   <div class="form">
       <div class="left">
           <h1>Query Box</h1>
-          <p>You can Mention your Query in here.</p>
+          <p>You can mention your query  here.</p>
           <img src="../../../assets/post.jpg" alt="" width="300px" height="300px">
       </div>
       <div class="room-quries">
@@ -43,10 +43,10 @@
               <p
                 *ngIf="ExchangeForm.controls['RoomNo'].errors?.['required']"
               >
-            should not be Empty
+            Room No should not be empty
               </p>
               <p *ngIf="ExchangeForm.controls['RoomNo'].errors?.['pattern']">
-               valid Room Number
+               Valid Room Number
               </p>
             </div>
           </div>
@@ -61,7 +61,7 @@
             />
             <div *ngIf="ExchangeForm.controls['namevalue'].dirty" class="alert">
               <p *ngIf="ExchangeForm.controls['namevalue'].errors?.['required']">
-                User name should not be Empty
+                User name should not be empty
               </p>
               <p *ngIf="ExchangeForm.controls['namevalue'].errors?.['pattern']">
                 Enter proper User Name
@@ -72,7 +72,7 @@
           <div class="mobile">
             <input
               type="number"
-              placeholder="Mobil-number"
+              placeholder="Mobile Number"
               #mobil1
 
               formControlName="mobilevalue"
@@ -82,7 +82,7 @@
               <p
                 *ngIf="ExchangeForm.controls['mobilevalue'].errors?.['required']"
               >
-                Mobile Number should not be Empty
+                Mobile Number should not be empty
               </p>
               <p *ngIf="ExchangeForm.controls['mobilevalue'].errors?.['pattern']">
                 Enter a valid Mobile Number
@@ -100,10 +100,10 @@
           />
           <div *ngIf="ExchangeForm.controls['Subject'].dirty" class="alert">
             <p *ngIf="ExchangeForm.controls['Subject'].errors?.['required']">
-              User name should not be Empty
+              Subject should not be empty
             </p>
             <p *ngIf="ExchangeForm.controls['Subject'].errors?.['pattern']">
-              Enter proper User Name
+              Enter proper Subject
             </p>
           </div>
         </div>
@@ -118,15 +118,12 @@
           />
           <div *ngIf="ExchangeForm.controls['Reason'].dirty" class="alert">
             <p *ngIf="ExchangeForm.controls['Reason'].errors?.['required']">
-              User name should not be Empty
-            </p>
-             <p *ngIf="ExchangeForm.controls['namevalue'].errors?.['pattern']">
-              Enter proper User Name
+              Reason should not be Empty
             </p>
           </div>
         </div>
 
-        <button id="submitbtn" type="submit">submi</button></form>
+        <button id="submitbtn" type="submit" [disabled]="ExchangeForm.invalid">Submit</button></form>
     </div>
   </div>
 </div>

@@ -11,8 +11,8 @@
       "namevalue": "arunkumar",
       "emailvalue": "arun123@gmail.com",
       "mobilevalue": 9597374373,
-      "passwordvalue": "12345Aa@$",
-      "confirmpasswordvalue": "12345Aa@$",
+      "passwordvalue": "Arun123@gmail.com",
+      "confirmpasswordvalue": "Arun123@gmail.com",
       "id": 1
     },
     {
@@ -51,21 +51,39 @@
   "profile": [
     {
       "Name": "Arunkumar",
-      "email": "ajayarun348@gmail.com",
+      "Email": "ajayarun348@gmail.com",
       "phone": "9597374373",
       "register": "1915003",
       "feesStatus": "paid",
-      "roomno": "1",
+      "roomno": "001",
       "id": 1
     },
     {
       "Name": "mani",
-      "email": "mani@gmail.com",
+      "Email": "mani@gmail.com",
       "phone": "959765486",
       "register": "1915368",
       "feesStatus": "unpaid",
       "roomno": "002",
       "id": 2
+    },
+    {
+      "Name": "Hari",
+      "Email": "hari123@gmail.com",
+      "phone": "959765486",
+      "register": "1915368",
+      "feesStatus": "unpaid",
+      "roomno": "004",
+      "id": 3
+    },
+    {
+      "Name": "dfgh",
+      "Email": "dfghjk@gmail.com",
+      "phone": 9874563256,
+      "register": 8933666,
+      "feesStatus": "paid",
+      "roomno": 655,
+      "id": 4
     }
   ],
   "admin": [
@@ -101,80 +119,70 @@
       "Adharnumber": "6788 6544 7890",
       "roomnumber": "0002",
       "regNo": "1915004",
-      "id": 2
-    },
-    {
-      "name": "dinesh",
-      "mobile": "9876543210",
-      "age": "21",
-      "Fathername": "diwakar",
-      "mothername": "sivani",
-      "Email": "dinesh123@gmail.com",
-      "permentaddress": "Namakkal",
-      "collegename": "ksr",
-      "Adharnumber": "9876 6543 6789",
-      "roomnumber": "0003",
-      "regNo": "1915005",
-      "id": 3
-    },
-    {
-      "name": "Mani",
-      "mobile": "9876543210",
-      "age": "24",
-      "Fathername": "kavin",
-      "mothername": "kala",
-      "Email": "mani123@gmail.com",
-      "permentaddress": "salem",
-      "collegename": "ksr",
-      "Adharnumber": "7659 2356 6784",
-      "roomnumber": "0004",
-      "regNo": "1915008",
-      "id": 4,
-      "room": "24",
-      "email": "mani123@gmail.com",
-      "phoneno": "24"
+      "id": 2,
+      "email": "hari123@gmail.com",
+      "phoneno": "22",
+      "room": "22"
     }
   ],
   "AddRoomData": [
     {
-      "RoomNo": "05",
+      "RoomNo": "105",
       "id": 1
     },
     {
-      "RoomNo": "09",
+      "RoomNo": "109",
       "id": 2
     },
     {
-      "RoomNo": "04",
+      "RoomNo": "104",
       "id": 3
     },
     {
-      "RoomNo": "08",
+      "RoomNo": "108",
       "id": 4
     },
     {
-      "RoomNo": "10",
+      "RoomNo": "110",
       "id": 5
     },
     {
-      "RoomNo": "11",
+      "RoomNo": "111",
       "id": 6
     },
     {
-      "RoomNo": "07",
+      "RoomNo": "107",
       "id": 7
+    },
+    {
+      "RoomNo": "109",
+      "id": 8
+    },
+    {
+      "RoomNo": "102",
+      "id": 10
     }
   ],
   "RoomData": [
     {
-      "RoomNo": "02",
+      "RoomNo": "102",
       "RoomStatus": "filled",
       "id": 1
     },
     {
-      "RoomNo": "12",
+      "RoomNo": "101",
       "RoomStatus": "filled",
       "id": 2
+    },
+    {
+      "RoomNo": "103",
+      "RoomStatus": "filled",
+      "id": 3
+    },
+    {
+      "RoomNo": "104",
+      "RoomStatus": "filled",
+      "id": 4
     }
   ],
   "attendanceData": [
@@ -182,7 +190,7 @@
       "Name": "arun",
       "phone": "25645456",
       "status": "present",
-      "roomno": "1",
+      "roomno": "101",
       "date": "22-01-2023",
       "id": 1
     },
@@ -190,46 +198,93 @@
       "Name": "mani",
       "phone": "9874563210",
       "status": "present",
-      "roomno": "004",
+      "roomno": "104",
+      "date": "22-01-2023",
+      "id": 3
+    },
+    {
+      "Name": "hari",
+      "phone": "9874563210",
+      "Email": "hari123@gmail.com",
+      "status": "present",
+      "roomno": "107",
+      "date": "22-01-2023",
       "id": 3
     }
   ],
-  "MessData": [],
-  "vacated": [],
+  "MessData": [
+    {
+      "mrg": "Idly",
+      "mrg2": "Pongal",
+      "afternoon": "Sambar",
+      "afternoon2": "Rasam",
+      "evening": "Vadai",
+      "evening2": "Samosa",
+      "night": "Parrota",
+      "night2": "Dosa",
+      "id": 1
+    }
+  ],
+  "vacated": [
+    {
+      "namevalue": "hari",
+      "Status": "vacate",
+      "mobilevalue": 9853149334,
+      "RoomNo": 101,
+      "emailvalue": "hari123@gmail.com",
+      "Reason": "College leave so i vacate my room",
+      "date": "2023-06-02",
+      "id": 1
+    }
+  ],
   "room_vacate": [
     {
-      "namevalue": "mani",
+      "namevalue": "Arunkrish",
       "Status": "vacate",
-      "mobilevalue": 9853149331,
-      "RoomNo": 5526,
+      "mobilevalue": 9876543256,
+      "RoomNo": 102,
+      "Reason": "Semster holiday, so i vacate my room",
+      "date": "2023-06-14",
+      "emailvalue": "ari123@gmail.com",
+      "id": 3
+    }
+  ],
+  "reject_vacate": [
+    {
+      "namevalue": "hari",
+      "Status": "vacate",
+      "mobilevalue": 9853149334,
+      "emailvalue": "hari123@gmail.com",
+      "RoomNo": 101,
       "Reason": "College leave so i vacate my room",
       "date": "2023-06-02",
       "id": 1
     },
     {
-      "namevalue": "hari",
-      "Status": "vacate",
-      "mobilevalue": 9853149334,
-      "RoomNo": 5527,
-      "Reason": "College leave so i vacate my room",
-      "date": "2023-06-02",
+      "namevalue": "Dinesh",
+      "emailvalue": "dinesh123@gmail.com",
+      "mobilevalue": 9876543210,
+      "passwordvalue": "Dinesh123@gmail.com",
+      "confirmpasswordvalue": "Dinesh123@gmail.com",
       "id": 2
     },
     {
-      "namevalue": "ganesh",
-      "Status": "vacate",
-      "mobilevalue": 9853149334,
-      "RoomNo": 5528,
-      "Reason": "College leave so i vacate my room",
-      "date": "2023-06-02",
+      "namevalue": "arunkumar",
+      "emailvalue": "arun123@gmail.com",
+      "mobilevalue": 9597374373,
+      "passwordvalue": "12345Aa@$",
+      "confirmpasswordvalue": "12345Aa@$",
       "id": 3
     },
     {
-      "Status": null,
-      "RoomNo": null,
-      "Reason": "2023-06-02",
+      "namevalue": "hari",
+      "Status": "vacate",
+      "mobilevalue": 9853149334,
+      "emailvalue": "hari123@gmail.com",
+      "RoomNo": 5527,
+      "Reason": "College leave so i vacate my room",
       "date": "2023-06-02",
-      "id": 4
+      "id": 5
     }
   ],
   "user_attendance": [
@@ -315,34 +370,138 @@
       "Reason": "sdfghjk",
       "RoomNo": 2232,
       "id": 1
+    },
+    {
+      "namevalue": "hhhh",
+      "mobilevalue": 9874563333,
+      "Subject": "gggg",
+      "Reason": "jujjj",
+      "RoomNo": 4444,
+      "id": 2
     }
   ],
   "MessQy": [
     {
-      "namevalue": "asdfghjkl",
+      "namevalue": "sathis",
       "emailvalue": null,
-      "mobilevalue": 9874532103,
-      "Subject": "kjhg",
-      "Reason": "kjhgf",
-      "RoomNo": 9851,
-      "id": 1
+      "mobilevalue": 8874563256,
+      "Subject": "food Taste",
+      "Reason": "it is not nice",
+      "RoomNo": 6,
+      "id": 2
+    },
+    {
+      "namevalue": "varun",
+      "emailvalue": null,
+      "mobilevalue": 8874563256,
+      "Subject": "food Taste",
+      "Reason": "it is not nice",
+      "RoomNo": 9,
+      "id": 3
     }
   ],
-  "RoomQy": [],
+  "RoomQy": [
+    {
+      "namevalue": "kumar",
+      "emailvalue": null,
+      "mobilevalue": 8874563255,
+      "Subject": "Fan issue",
+      "Reason": "Fan is not working properly",
+      "RoomNo": 3,
+      "id": 6
+    },
+    {
+      "namevalue": "karthi",
+      "emailvalue": null,
+      "mobilevalue": 7874563255,
+      "Subject": "light issue",
+      "Reason": "light is not working properly",
+      "RoomNo": 7,
+      "id": 7
+    }
+  ],
   "holiday": [
     {
-      "Event": "pongal",
-      "From": "20-01-2023",
-      "To:": "25-01-2023",
-      "description": "Happy pongal holliday",
+      "Event": "Pongal",
+      "From": "15-01-2023",
+      "To": "20-01-2023",
+      "description": "Happy Pongal Holidays",
       "id": 1
     },
     {
       "Event": "Diwali",
       "From": "20-11-2023",
       "To": "25-11-2023",
-      "description": "Happy Diwali holliday",
+      "description": "Happy Diwali Holidays",
       "id": 2
+    }
+  ],
+  "contact": [
+    {
+      "name": null,
+      "Email": null,
+      "textArea": null,
+      "id": 1
+    },
+    {
+      "name": "Arun",
+      "Email": null,
+      "textArea": null,
+      "id": 2
+    },
+    {
+      "name": "Arun",
+      "Email": null,
+      "textArea": null,
+      "id": 3
+    },
+    {
+      "name": "Arun",
+      "Email": "ajata@g,ail.com",
+      "textArea": null,
+      "id": 4
+    },
+    {
+      "name": "Arun",
+      "Email": "ajata@g,ail.com",
+      "textArea": null,
+      "id": 5
+    },
+    {
+      "name": "Arun",
+      "Email": "ajata@g,ail.com",
+      "textArea": null,
+      "id": 6
+    },
+    {
+      "name": "dfgh",
+      "Email": "egh@gmail.com",
+      "textArea": "dfghj",
+      "id": 7
+    },
+    {
+      "name": "dfgh",
+      "Email": "egh@gmail.com",
+      "textArea": "",
+      "id": 8
+    },
+    {
+      "name": null,
+      "Email": null,
+      "textArea": null,
+      "id": 9
+    },
+    {
+      "name": "fghjk",
+      "Email": "fghj@gmail.com",
+      "textArea": "fghj",
+      "id": 10
+    }
+  ],
+  "ForgotEmail": [
+    {
+      "emailvalue": "ajayarun348@gmail.com",
+      "id": 1
     }
   ]
 }

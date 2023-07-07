@@ -87,11 +87,12 @@ color: blue;
 color: rgb(230, 0, 255);
 
 }
+
 .table_view{
 display: none;
 }
 .table_updates{
-color: rgb(0, 255, 26);
+
 display: none;
 
 
@@ -116,6 +117,7 @@ padding: 15px;
 .table_updates{
 display: none;
 border: 1px solid white;
+box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .show_update{
@@ -151,7 +153,8 @@ i{
   color: white;
 }
 .table_updates{
-  background:  aliceblue;
+  border-bottom: 15px solid blue;
+  border-radius: 10px;
 }
 form
 {
@@ -177,7 +180,7 @@ color: rgb(25, 24, 24);
   margin-bottom: 5%;
   color: rgb(9, 9, 9);
   background-color: white;
-border: none;
+
 }
 select{
    padding: 10px;
@@ -187,7 +190,7 @@ select{
   margin-bottom: 5%;
   color: rgb(9, 9, 9);
   background-color: white;
-border: none;
+
 
 }
 .table_1{
@@ -209,7 +212,7 @@ padding: 9px;
 border-radius: 3px;
 }
 .update_container_head{
-  margin: 10px;
+padding: 7px;
   font-size: x-large;
   color: white;
 }
@@ -220,6 +223,9 @@ p
 }
 .update_container_head{
   background-color: blue;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 10px;
 }
 #Save{
   padding: 10px;
@@ -268,4 +274,20 @@ p
 text-align: center;
 
 }
+.alert
+{
+  color: red;
+
+}
+.butn_grid{
+  width: 100%;
+}
+#submit{
+  position: relative;
+  left: 60%;
+}
+#delete{
+  margin-left: 41%;
+}
+
 

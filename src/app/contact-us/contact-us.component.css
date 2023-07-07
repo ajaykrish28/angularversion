@@ -112,4 +112,12 @@ button{
   cursor: pointer;
 
 }
+.rightContact{
+   position: relative;
+}
+.alert{
+  color: red;
+  margin-left: 30px;
+  position: absolute;
+}
 

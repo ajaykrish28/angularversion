@@ -1,22 +1,41 @@
 <app-user-sidebar></app-user-sidebar>
 <div class="home_content">
   <div class="text">Leave Deatils</div>
+
+<div class="instruction">
+  <h2> Instructions</h2> <ul><li> <p>If you are failed to present in the Proper time in the Hostel ,You will be consider as an Late. </p></li>
+  <li><p>If you are regulary late for the hostel,penality will be allocated. </p></li>
+  <li>
+
+    <p> So follow the proper time and avoid the penality.</p></li></ul>
+
+</div>
   <table id="table_view">
     <tr>
-      <th>name</th>
-      <th>phone</th>
-      <th>Room no</th>
+      <th>Name</th>
+      <th>Phone No</th>
+      <th>Room No</th>
       <th>Date</th>
-      <th>status</th>
+      <th>Status</th>
     </tr>
     <!-- data 1 -->
-    <tr *ngFor="let eachData of attenance">
+    <!-- <tr *ngFor="let eachData of attenance">
       <td>{{ eachData.Name }}</td>
       <td>{{ eachData.phone }}</td>
-      <td>{{ eachData.roomno }}</td>
+      <td>{{ eachData.Room }}</td>
       <td>{{ eachData.date }}</td>
 
       <td>{{ eachData.status }}</td>
+    </tr> -->
+    <tr>
+      <td>{{ Name }}</td>
+      <td>{{ phone }}</td>
+      <td>{{ Room }}</td>
+      <td>{{ date }}</td>
+    <td>{{ status }}</td>
+
+
     </tr>
+
   </table>
 </div>

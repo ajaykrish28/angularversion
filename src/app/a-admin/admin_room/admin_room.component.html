@@ -1,93 +1,80 @@
 <app-SideBar></app-SideBar>
 <div class="home_content">
-  <div class="text">Room</div>
+  <div class="text">Rooms Details</div>
   <div class="manageDetails">
     <div class="viewDetails">
-      <h1>manage room</h1>
+      <h1>Manage Rooms</h1>
       <i class="bx bx-home bx-md"></i>
       <p>Here you can manage room status</p>
 
-      <button id="viewbtn" (click)="show_quries()">Modify</button>
+      <button id="viewbtn" (click)="show_quries()">View</button>
     </div>
     <div class="updates">
       <h1>Room Queries</h1>
       <i class="bx bx-user-voice bx-md"></i>
-      <p>Here you can see the quries of the room</p>
+      <p>Here you can see the queries of the rooms</p>
 
-      <button id="update_btn" (click)="show_view()">view</button>
+      <button id="update_btn" (click)="show_view()">View</button>
     </div>
   </div>
   <div class="Table_Info">
     <div class="table_view">
       <table id="table_view">
         <tr>
-          <th>s.no</th>
-          <th>Name</th>
-          <th>Phone number</th>
-          <th>Email id</th>
 
+          <th>Name</th>
+
+
+          <th>Phone Number</th>
+          <th>Subject</th>
+
+          <th>Reason</th>
           <th>Room Number</th>
 
-          <th>Subject</th>
-          <th>Reason</th>
+
           <th>Status</th>
         </tr>
-        <!-- data 1 -->
-        <tr>
-          <td>1</td>
-          <td>Arunkumar s</td>
-          <td>9597374379</td>
-          <td>arun@gmai.com</td>
 
-          <td>001</td>
-          <td>Fan issue</td>
+        <tr  *ngFor="let eachData of messInfoData">
+          <td>{{ eachData.namevalue}}</td>
 
-          <td>fan is not working properly</td>
-          <td>solved</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Ashokkumar a</td>
-          <td>9678374379</td>
-          <td>ashok@gmai.com</td>
+          <td>{{ eachData.mobilevalue}}</td>
+          <td>{{ eachData.Subject }}</td>
+          <td>{{ eachData.Reason}}</td>
+          <td>{{ eachData.RoomNo }}</td>
 
-          <td>001</td>
-
-          <td>Fan issue</td>
-
-          <td>fan is not working properly</td>
-        </tr>
-
-        <tr>
-          <td>3</td>
-          <td>selva m</td>
-          <td>8673337437</td>
-          <td>selvak@gmai.com</td>
-
-          <td>003</td>
-
-          <td>power board issue</td>
-          <td>power board is not working properly</td>
+ <button id="solve" (click)="deletedata(eachData.id)">Solved</button>
         </tr>
       </table>
     </div>
     <div class="table_updates">
-      <div class="update_container_head">Room updation</div>
+      <div class="update_container_head">Room Updation</div>
       <!-- addRoom -->
       <div class="addRoom">
         <form id="available_room" [formGroup]="addRoom" (ngSubmit)="addroominfo()">
           <label for="">Add New Room:</label> &nbsp;
-          <input type="text" formControlName="RoomNo" name="" id="" />
+          <input type="text" formControlName="RoomNo" name="" id=""  pattern="^[ 0-1]\d{2}$" />
 
 
-          <button>submit</button>
-          <button >delete</button>
+          <button id="addRoomSubmit" [disabled]="addRoom.invalid"> Add</button>
+
         </form>
+        <button id="AddBtnDelete" (click)="deleteDataAvail()">Delete</button>
+        <div *ngIf="addRoom.controls['RoomNo'].dirty" class="alert">
+          <p
+            *ngIf="addRoom.controls['RoomNo'].errors?.['required']"
+          >
+         Room Number should not be Empty
+          </p>
+          <p *ngIf="addRoom.controls['RoomNo'].errors?.['pattern']">
+           valid Room Number
+          </p>
+        </div>
       </div>
 
       <table id="roomTable">
         <tr>
-          <th>s.no</th>
+          <th>S.No</th>
           <th>Room Number</th>
 
         </tr>
@@ -100,21 +87,41 @@
       </table>
       <div class="UpdateRoom">
 
-        <form action="" [formGroup]="removeroom" >
+        <form action="" [formGroup]="removeroom" (ngSubmit)="roominfo()" >
           <!-- (ngSubmit)="roominfo()" -->
         <h2></h2>
 
           <label for="">Room Number :</label>&nbsp;
-          <input type="text" formControlName="RoomNo" name="" id="" />   <label for="">status :</label>&nbsp;
+          <input type="text" formControlName="RoomNo" name="" id="" pattern="^[ 0-1]\d{2}$" />   <label for="">Status :</label>&nbsp;
           <input type="text" formControlName="RoomStatus" name="" id="" />
 
-          <button (click)="roominfo()">submit</button>
-          <button (click)="deleteData()">delete</button>
+          <button  id="removeSumbitBtn" [disabled]="removeroom.invalid">Submit</button>
+
         </form>
+        <button id="removeBtnDelete" (click)="deleteData()">Delete</button>
+        <div *ngIf="removeroom.controls['RoomNo'].dirty" class="alert">
+          <p
+            *ngIf="removeroom.controls['RoomNo'].errors?.['required']"
+          >
+         Room Numbert should not be Empty
+          </p>
+          <p *ngIf="removeroom.controls['RoomNo'].errors?.['pattern']">
+           valid Room Number
+          </p>
+        </div>
+        <!-- Text -->
+        <div *ngIf="removeroom.controls['RoomStatus'].dirty" class="alert">
+          <p
+            *ngIf="removeroom.controls['RoomStatus'].errors?.['required']"
+          >
+         Room Status should not be Empty
+          </p>
+
+        </div>
 
       <table id="DeactiveRoom">
         <tr>
-          <th>s.no</th>
+          <th>S.No</th>
           <th>Room Number</th>
           <th>Room Status</th>
           </tr>
@@ -127,7 +134,9 @@
 
            </tr>
 
-      </table> </div>
+      </table>
+      <br><br>
+    </div>
 
 
     </div>

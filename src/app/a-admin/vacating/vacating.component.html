@@ -1,19 +1,19 @@
 <app-SideBar></app-SideBar>
 <div class="home_content">
-  <div class="text">Vacating details</div> <div class="manageDetails">
+  <div class="text">Vacating Details</div> <div class="manageDetails">
     <div class="viewDetails">
-      <h1>updates  status</h1>
+      <h1>Updates  Status</h1>
       <i class="bx bx-user bx-md"></i>
-      <p>Here you can see feedback Details of the student</p>
+      <p>Here you can see feedback details of the students</p>
 
-      <button id="viewbtn" (click)="viewbtn()">view</button>
+      <button id="viewbtn" (click)="viewbtn()">View</button>
     </div>
     <div class="updates">
-      <h1>view list</h1>
+      <h1>View List</h1>
       <i class="bx bx-cloud-upload bx-md"></i>
       <p>Here you can see the update menu details</p>
 
-      <button id="update_btn" (click)="update_btn()">updates</button>
+      <button id="update_btn" (click)="update_btn()">Updates</button>
     </div>
   </div>
   <!-- table_view -->
@@ -22,10 +22,10 @@
       <tr>
 
         <th>Name</th>
-        <th>Room number</th>
-        <th>Phone number</th>
+        <th>Room Number</th>
+        <th>Phone Number</th>
 
-        <th> status</th>
+        <th> Status</th>
 
 
         <th>Reason</th>
@@ -43,8 +43,8 @@
         <td>{{ filled.RoomNo}}</td>
         <td>{{ filled.Reason }}</td>
         <td>{{ filled.date }}</td>
-        <td> <button id="Accept"  > Accept</button></td>
-        <td> <button id="Reject"  >Reject</button></td>
+        <td> <button id="Accept" (click)="acceptData( filled)"   > Accept</button></td>
+        <td> <button id="Reject"  (click)="deleteData(filled)" >Reject</button></td>
       </tr>
     </table>
   </div>
@@ -55,12 +55,12 @@
 
     <table id="table_view">
       <tr>
-
+<th>s.no</th>
         <th>Name</th>
-        <th>Room number</th>
-        <th>Phone number</th>
+        <th>Room Number</th>
+        <th>Phone Number</th>
 
-        <th> status</th>
+        <th>Status</th>
 
 
         <th>Reason</th>
@@ -71,7 +71,10 @@
 
       </tr>
       <!-- data 1 -->
-      <tr *ngFor="let filled of feesstatus">
+      <tr *ngFor="let filled of vacate ,index as i" >
+        <td>{{i+1
+        }}
+        </td>
         <td>{{ filled.namevalue }}</td>
         <td>{{ filled.Status }}</td>
         <td>{{ filled.mobilevalue }}</td>

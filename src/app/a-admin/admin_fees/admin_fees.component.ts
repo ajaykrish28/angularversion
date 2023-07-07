@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { HttpDbService } from 'src/app/httpDb.service';
-
+import { Route, Router } from '@angular/router';
 @Component({
   selector: 'app-admin_fees',
   templateUrl: './admin_fees.component.html',
@@ -10,7 +10,7 @@ import { HttpDbService } from 'src/app/httpDb.service';
 export class Admin_feesComponent implements OnInit {
   feesstatus: any;
 
-  constructor(private fb:FormBuilder,private http:HttpDbService) {
+  constructor(private fb:FormBuilder,private http:HttpDbService , private route: Router) {
     this.http.getfeesupdate().subscribe((data:any)=>{
        this.feesstatus=data;
        console.log(this.feesstatus);
@@ -36,14 +36,14 @@ export class Admin_feesComponent implements OnInit {
 
   }
   feesgrp=this.fb.group({
-    Name:[,Validators.required],
-    email:[,Validators.required],
-    phone:[,Validators.required],
-    register:[,Validators.required],
-    feesStatus:[,Validators.required],
-    roomno:[,Validators.required]
+    Name:[,[Validators.required]],
+    Email:[,[Validators.required]],
+    phone:[,[Validators.required]],
+    register:[,[Validators.required]],
+    feesStatus:[,[Validators.required]],
+    roomno:[,[Validators.required]]
 
-  })
+  });
 
 
   feesform(){
@@ -53,10 +53,23 @@ export class Admin_feesComponent implements OnInit {
 
 
   }
-
+ allowAcces():boolean{
+    if(sessionStorage.getItem('Adminlogin')== 'true'||sessionStorage.getItem('Adminlogin')!=null){
+      return true;
+    }
+    else{
+      return false;
+    }
+    }
 
 
   ngOnInit() {
+    this.empty();
   }
+  empty(){
+  if(!this.allowAcces()){
+    this.route.navigate(['/login']);
+  }
+}
 
 }

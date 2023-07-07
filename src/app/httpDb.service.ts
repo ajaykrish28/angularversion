@@ -9,6 +9,11 @@ import { map } from 'rxjs';
 export class HttpDbService {
   constructor(private http: HttpClient) {}
 
+  contactinfo(data:any){
+    return this.http.post('http://localhost:3000/contact', data);
+
+  }
+
   feesupdate(fees: any) {
     return this.http.post('http://localhost:3000/profile', fees);
   }
@@ -38,12 +43,20 @@ export class HttpDbService {
   getaddroom() {
     return this.http.get('http://localhost:3000/AddRoomData');
   }
+  deleteRoomAvail(id: any) {
+    alert(id);
+    return this.http.delete(` http://localhost:3000/AddRoomData/${id}`);
+  }
+
 
   deleteRoom(id: any) {
     alert(id);
     return this.http.delete(` http://localhost:3000/RoomData/${id}`);
   }
-
+  deleteRoomIssue(id: any) {
+    alert(id);
+    return this.http.delete(` http://localhost:3000/RoomQy/${id}`);
+  }
 
   roomInfo(room: any) {
     return this.http.post(' http://localhost:3000/RoomData', room);
@@ -60,12 +73,29 @@ export class HttpDbService {
   messinfo(messdata: any) {
     return this.http.post('http://localhost:3000/MessData', messdata);
   }
+  getmessinfo() {
+    return this.http.get('http://localhost:3000/MessData');
+  }
  vacateRoomUser() {
     return this.http.get('http://localhost:3000/room_vacate');
   }
-  vacatedUser(){
-
+  deletevacateUser(id:any) {
+    alert(id)
+    return this.http.delete(` http://localhost:3000/room_vacate/${id}`);
   }
+  addVacatingAccpt( data:any){
+    return this.http.post('http://localhost:3000/vacated/' , data);
+  }
+  getVactedUser(){
+    return this.http.get("http://localhost:3000/vacated");
+  }
+  getVactedReject(){
+    return this.http.get("http://localhost:3000/reject_vacate");
+  }
+  VactedReject( data:any){
+    return this.http.post("http://localhost:3000/reject_vacate/" , data);
+  }
+
 
   searchUser(sort: string): Observable<any> {
     return this.http.get('http://localhost:3000/Studentdata').pipe(
@@ -106,11 +136,25 @@ export class HttpDbService {
   updatemessQy(messQy:any){
     return this.http.post('  http://localhost:3000/MessQy', messQy);
   }
+getmessQy(){
+    return this.http.get('  http://localhost:3000/MessQy');
+  }
   updateRoomQy(roomQy:any){
     return this.http.post(' http://localhost:3000/RoomQy', roomQy);
   }
+  getRoomQy(){
+    return this.http.get(' http://localhost:3000/RoomQy');
+  }
   getTime(): Observable<any> {
     return this.http.get(' http://localhost:3000/holiday');
+  }
+  deleteVacting(url:any){
+
+  }
+
+
+  fogotInfo(info:any){
+    return this.http.post('  http://localhost:3000/ForgotEmail', info);
   }
 
    }
